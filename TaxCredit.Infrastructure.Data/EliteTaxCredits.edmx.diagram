@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="47239cd2ce734f80b12aedffae1b8378" Name="Diagram1">
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcAGMI" Width="1.5" PointX="3.75" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcAsset" Width="1.5" PointX="5.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcBuilding" Width="1.5" PointX="1.5" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcComplianceEntity" Width="1.5" PointX="21" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcComplianceEntityRelationship" Width="1.5" PointX="2.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcComplianceEntityType" Width="1.5" PointX="18.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcComplianceProgram" Width="1.5" PointX="18.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcComplianceRentRestrictionIncomeLimit" Width="1.5" PointX="23.25" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcComplianceRule" Width="1.5" PointX="21" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcComplianceRuleTarget" Width="1.5" PointX="23.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDelinquentRentColumn" Width="1.5" PointX="2.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTAlarm" Width="1.5" PointX="14.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTAsset" Width="1.5" PointX="21.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTBuilding" Width="1.5" PointX="14" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTBuildingComplianceReport" Width="1.5" PointX="7.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTEligibility" Width="1.5" PointX="12" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTFamily" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTFamilyMember" Width="1.5" PointX="19" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTFamilyMemberStatu" Width="1.5" PointX="16.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTIncome" Width="1.5" PointX="24.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTIncomeType" Width="1.5" PointX="22" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTMedianIncome" Width="1.5" PointX="14" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTMinimumIncomeLimit" Width="1.5" PointX="11.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTMinimumSetAsideType" Width="1.5" PointX="11.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTProperty" Width="1.5" PointX="11.75" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTPropertyComplianceReport" Width="1.5" PointX="16.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTRentRestrictionIncomeLimit" Width="1.5" PointX="14.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTSpecialStatu" Width="1.5" PointX="16.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTStudentStatu" Width="1.5" PointX="16.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTTIC" Width="1.5" PointX="22" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTTransactionType" Width="1.5" PointX="19.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcDTUnit" Width="1.5" PointX="16.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcEliteKeyMap" Width="1.5" PointX="26" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcFamily" Width="1.5" PointX="0.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcFamilyMember" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcFamilyMemberStatu" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcGender" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcHistoricalOccupancy" Width="1.5" PointX="6" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcIncome" Width="1.5" PointX="11.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcIncomeType" Width="1.5" PointX="9" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcMedianIncome" Width="1.5" PointX="3.75" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcMinimumIncomeLimit" Width="1.5" PointX="1.5" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcMinimumSetAsideType" Width="1.5" PointX="3.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcMoveInTemp" Width="1.5" PointX="25.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcOccupancy" Width="1.5" PointX="6" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcProperty" Width="1.5" PointX="1.5" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcRent" Width="1.5" PointX="6.75" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcRole" Width="1.5" PointX="5.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcSetting" Width="1.5" PointX="16.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcSpecialStatu" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcStudentStatu" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcTIC" Width="1.5" PointX="9" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcTransactionType" Width="1.5" PointX="6.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcUniqueKeyMap" Width="1.5" PointX="23.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcUnit" Width="1.5" PointX="3.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcUnitSize" Width="1.5" PointX="1.5" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcUser" Width="1.5" PointX="5.75" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcUsersRole" Width="1.5" PointX="8" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EliteTaxCreditModel.tcRentRestrictionPercent" Width="1.5" PointX="8.75" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_AGMI_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Assets_FamilyMember" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Building_Property" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcBuilding_tcMinimumIncomeLimits" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcBuilding_tcMinimumSetAsideType" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcBuilding_tcMinimumSetAsideType1" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Unit_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_ComplianceEntity_ComplianceEntityType" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcComplianceRentRestrictionIncomeLimit_tcComplianceEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_ComplianceRule_ComplianceProgram" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_ComplianceRuleTarget_ComplianceRule" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTAssets_tcDTFamilyMember" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTBuilding_tcDTMinimumIncomeLimits" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTBuilding_tcDTMinimumSetAsideType" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTBuilding_tcDTMinimumSetAsideType1" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTBuilding_tcDTProperty" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTUnit_tcDTBuilding" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTRentRestrictionIncomeLimit_tcDTEligibility" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTFamilyMember_tcDTFamily" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTTIC_tcDTFamily" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTFamilyMember_tcDTFamilyMemberStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTFamilyMember_tcDTSpecialStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTFamilyMember_tcDTStudentStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTIncome_tcDTFamilyMember" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTIncome_tcDTIncomeType" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTMedianIncome_tcDTProperty" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTRentRestrictionIncomeLimit_tcTIC" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcDTTIC_tcDTTransactionType" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcEliteKeyMap_tcUniqueKeyMap" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_FamilyMember_Family" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcHistoricalOccupancies_tcFamily" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcOccupancy_tcFamily" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcTIC_tcFamily" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_FamilyMember_FamilyMemberStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_FamilyMember_SpecialStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_FamilyMember_StudentStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Income_FamilyMember" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcFamilyMember_tcGender" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcHistoricalOccupancies_tcUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Income_IncomeType" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcMedianIncome_tcProperty" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Occupancy_Family" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Occupancy_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Rent_Property" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Rent_UnitSize" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_UsersRoles_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_tcTIC_tcTransactionType" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_Unit_UnitSize" ManuallyRouted="false" />
+        <AssociationConnector Association="EliteTaxCreditModel.FK_UsersRoles_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

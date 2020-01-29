@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCredit.Core", "..\TaxCredit.Core\TaxCredit.Core.csproj", "{C0817063-4029-41D0-9124-F8008D00CE5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCredit.Infrastructure.Data", "..\TaxCredit.Infrastructure.Data\TaxCredit.Infrastructure.Data.csproj", "{780803E6-897A-449E-99E2-7E64EC90442A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCredit.Infrastructure", "..\TaxCredit.Infrastructure\TaxCredit.Infrastructure.csproj", "{A2B79853-B2DD-4F51-B9E7-CF5691FDB4C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCredit.Tests", "..\TaxCredit.Tests\TaxCredit.Tests.csproj", "{BF863A90-D35A-4561-B420-F01FE024C045}"
+	ProjectSection(ProjectDependencies) = postProject
+		{84C52DCD-AB9A-4288-9C33-17035009E4A3} = {84C52DCD-AB9A-4288-9C33-17035009E4A3}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F2FE891F-F19A-46E9-9721-7AAD09D99BAF}"
+	ProjectSection(SolutionItems) = preProject
+		Notes.txt = Notes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCredit.Infrastructure.WorkflowServices", "TaxCredit.Infrastructure.WorkflowServices\TaxCredit.Infrastructure.WorkflowServices.csproj", "{84C52DCD-AB9A-4288-9C33-17035009E4A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0817063-4029-41D0-9124-F8008D00CE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0817063-4029-41D0-9124-F8008D00CE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0817063-4029-41D0-9124-F8008D00CE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0817063-4029-41D0-9124-F8008D00CE5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780803E6-897A-449E-99E2-7E64EC90442A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780803E6-897A-449E-99E2-7E64EC90442A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780803E6-897A-449E-99E2-7E64EC90442A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780803E6-897A-449E-99E2-7E64EC90442A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2B79853-B2DD-4F51-B9E7-CF5691FDB4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B79853-B2DD-4F51-B9E7-CF5691FDB4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B79853-B2DD-4F51-B9E7-CF5691FDB4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B79853-B2DD-4F51-B9E7-CF5691FDB4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF863A90-D35A-4561-B420-F01FE024C045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF863A90-D35A-4561-B420-F01FE024C045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF863A90-D35A-4561-B420-F01FE024C045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF863A90-D35A-4561-B420-F01FE024C045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C52DCD-AB9A-4288-9C33-17035009E4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C52DCD-AB9A-4288-9C33-17035009E4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C52DCD-AB9A-4288-9C33-17035009E4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C52DCD-AB9A-4288-9C33-17035009E4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ndtfs.com:55555/tfs/pha
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\TaxCredit.Core\\TaxCredit.Core.csproj
+		SccProjectName1 = ../TaxCredit.Core
+		SccLocalPath1 = ..\\TaxCredit.Core
+		SccProjectUniqueName2 = ..\\TaxCredit.Infrastructure.Data\\TaxCredit.Infrastructure.Data.csproj
+		SccProjectName2 = ../TaxCredit.Infrastructure.Data
+		SccLocalPath2 = ..\\TaxCredit.Infrastructure.Data
+		SccProjectUniqueName3 = ..\\TaxCredit.Infrastructure\\TaxCredit.Infrastructure.csproj
+		SccProjectName3 = ../TaxCredit.Infrastructure
+		SccLocalPath3 = ..\\TaxCredit.Infrastructure
+		SccProjectUniqueName4 = ..\\TaxCredit.Tests\\TaxCredit.Tests.csproj
+		SccProjectName4 = ../TaxCredit.Tests
+		SccLocalPath4 = ..\\TaxCredit.Tests
+		SccProjectUniqueName5 = TaxCredit.Infrastructure.WorkflowServices\\TaxCredit.Infrastructure.WorkflowServices.csproj
+		SccProjectName5 = TaxCredit.Infrastructure.WorkflowServices
+		SccLocalPath5 = TaxCredit.Infrastructure.WorkflowServices
+	EndGlobalSection
+EndGlobal

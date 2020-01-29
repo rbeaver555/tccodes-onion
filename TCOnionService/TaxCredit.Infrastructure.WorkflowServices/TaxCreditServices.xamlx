@@ -1,0 +1,334 @@
+﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID1}" p1:TextExpression.References="{x:Reference __ReferenceID2}" ConfigurationName="Service1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="Service1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:ea="clr-namespace:EliteTaxCreditsService.Activities;assembly=TaxCredit.Infrastructure.WorkflowServices"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:tcm="clr-namespace:TaxCredit.Core.Models;assembly=TaxCredit.Core"
+ xmlns:u="clr-namespace:Unity;assembly=Unity.Container"
+ xmlns:u1="clr-namespace:Unity;assembly=Unity.Abstractions"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence p1:TextExpression.Namespaces="{x:Reference __ReferenceID1}" p1:TextExpression.References="{x:Reference __ReferenceID2}" DisplayName="Tax Credit Compliance Engine" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <p1:Pick sap2010:WorkflowViewState.IdRef="Pick_1">
+      <p1:PickBranch DisplayName="IsFamilyAndUnitEligible" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+        <p1:PickBranch.Variables>
+          <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+          <p1:Variable x:TypeArguments="x:Int32" Name="data" />
+          <p1:Variable x:TypeArguments="x:String" Name="GlobalTransactionKey">
+            <p1:Variable.Default>
+              <mca:CSharpValue x:TypeArguments="x:String">string.Empty</mca:CSharpValue>
+            </p1:Variable.Default>
+          </p1:Variable>
+          <p1:Variable x:TypeArguments="x:String" Name="GlobalExternalFamilyKey">
+            <p1:Variable.Default>
+              <mca:CSharpValue x:TypeArguments="x:String">string.Empty</mca:CSharpValue>
+            </p1:Variable.Default>
+          </p1:Variable>
+          <p1:Variable x:TypeArguments="x:String" Name="GlobalExternalUnitKey">
+            <p1:Variable.Default>
+              <mca:CSharpValue x:TypeArguments="x:String">string.Empty</mca:CSharpValue>
+            </p1:Variable.Default>
+          </p1:Variable>
+          <p1:Variable x:TypeArguments="x:String" Name="GlobalUtilityAllowance">
+            <p1:Variable.Default>
+              <mca:CSharpValue x:TypeArguments="x:String">string.Empty</mca:CSharpValue>
+            </p1:Variable.Default>
+          </p1:Variable>
+          <p1:Variable x:TypeArguments="u:UnityContainer" Name="GlobalUnityContainer">
+            <p1:Variable.Default>
+              <mca:CSharpValue x:TypeArguments="u:UnityContainer">null</mca:CSharpValue>
+            </p1:Variable.Default>
+          </p1:Variable>
+          <p1:Variable x:TypeArguments="ea:RuleResultArgument" Name="GlobalRulesResultArgument">
+            <p1:Variable.Default>
+              <mca:CSharpValue x:TypeArguments="ea:RuleResultArgument">new RuleResultArgument()</mca:CSharpValue>
+            </p1:Variable.Default>
+          </p1:Variable>
+          <p1:Variable x:TypeArguments="tcm:tcFamily" Name="GlobalTCFamily">
+            <p1:Variable.Default>
+              <mca:CSharpValue x:TypeArguments="tcm:tcFamily">null</mca:CSharpValue>
+            </p1:Variable.Default>
+          </p1:Variable>
+          <p1:Variable x:TypeArguments="tcm:tcComplianceEntity" Name="GlobalComplianceEntity">
+            <p1:Variable.Default>
+              <mca:CSharpValue x:TypeArguments="tcm:tcComplianceEntity">new tcComplianceEntity()</mca:CSharpValue>
+            </p1:Variable.Default>
+          </p1:Variable>
+        </p1:PickBranch.Variables>
+        <p1:PickBranch.Trigger>
+          <p1:Sequence DisplayName="Sequential Service" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <p1:TextExpression.Namespaces>
+              <sco:Collection x:TypeArguments="x:String" x:Name="__ReferenceID1">
+                <x:String>System</x:String>
+                <x:String>System.Collections.Generic</x:String>
+                <x:String>System.Data</x:String>
+                <x:String>System.Linq</x:String>
+                <x:String>System.Text</x:String>
+                <x:String>Unity</x:String>
+                <x:String>EliteTaxCreditsService.Activities</x:String>
+                <x:String>TaxCredit.Core.Models</x:String>
+              </sco:Collection>
+            </p1:TextExpression.Namespaces>
+            <p1:TextExpression.References>
+              <sco:Collection x:TypeArguments="p1:AssemblyReference" x:Name="__ReferenceID2">
+                <p1:AssemblyReference>CommonServiceLocator</p1:AssemblyReference>
+                <p1:AssemblyReference>EntityFramework</p1:AssemblyReference>
+                <p1:AssemblyReference>EntityFramework.SqlServer</p1:AssemblyReference>
+                <p1:AssemblyReference>Microsoft.CSharp</p1:AssemblyReference>
+                <p1:AssemblyReference>System.ComponentModel.DataAnnotations</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Web.DynamicData</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Drawing</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Web.Entity</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Web.ApplicationServices</p1:AssemblyReference>
+                <p1:AssemblyReference>System</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Activities</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Core</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Data</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Runtime.Serialization</p1:AssemblyReference>
+                <p1:AssemblyReference>System.ServiceModel</p1:AssemblyReference>
+                <p1:AssemblyReference>System.ServiceModel.Activities</p1:AssemblyReference>
+                <p1:AssemblyReference>System.ServiceModel.Channels</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Web</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
+                <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+                <p1:AssemblyReference>Unity.Abstractions</p1:AssemblyReference>
+                <p1:AssemblyReference>Unity.Configuration</p1:AssemblyReference>
+                <p1:AssemblyReference>Unity.Container</p1:AssemblyReference>
+                <p1:AssemblyReference>Unity.Interception</p1:AssemblyReference>
+                <p1:AssemblyReference>Unity.Interception.Configuration</p1:AssemblyReference>
+                <p1:AssemblyReference>Unity.RegistrationByConvention</p1:AssemblyReference>
+                <p1:AssemblyReference>Unity.ServiceLocation</p1:AssemblyReference>
+                <p1:AssemblyReference>TaxCredit.Core</p1:AssemblyReference>
+                <p1:AssemblyReference>TaxCredit.Infrastructure.Data</p1:AssemblyReference>
+                <p1:AssemblyReference>TaxCredit.Infrastructure</p1:AssemblyReference>
+                <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
+                <p1:AssemblyReference>TaxCredit.Infrastructure.WorkflowServices</p1:AssemblyReference>
+              </sco:Collection>
+            </p1:TextExpression.References>
+            <x:Reference>__ReferenceID0</x:Reference>
+            <ea:UnityRegisterActivity sap2010:WorkflowViewState.IdRef="UnityRegisterActivity_1">
+              <ea:UnityRegisterActivity.UnityContainer>
+                <p1:InOutArgument x:TypeArguments="u:UnityContainer">
+                  <mca:CSharpReference x:TypeArguments="u:UnityContainer">GlobalUnityContainer</mca:CSharpReference>
+                </p1:InOutArgument>
+              </ea:UnityRegisterActivity.UnityContainer>
+            </ea:UnityRegisterActivity>
+            <ea:TransferCertifcationToTaxCredit TransferSuccessful="{x:Null}" sap2010:WorkflowViewState.IdRef="TransferCertifcationToTaxCredit_1">
+              <ea:TransferCertifcationToTaxCredit.ExternalFamilyKey>
+                <p1:InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String">GlobalExternalFamilyKey</mca:CSharpValue>
+                </p1:InArgument>
+              </ea:TransferCertifcationToTaxCredit.ExternalFamilyKey>
+              <ea:TransferCertifcationToTaxCredit.TransactionKey>
+                <p1:InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String">GlobalTransactionKey</mca:CSharpValue>
+                </p1:InArgument>
+              </ea:TransferCertifcationToTaxCredit.TransactionKey>
+            </ea:TransferCertifcationToTaxCredit>
+            <ea:LoadRuleParameters sap2010:WorkflowViewState.IdRef="LoadRuleParameters_1">
+              <ea:LoadRuleParameters.ExternalFamilyKey>
+                <p1:InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String">GlobalExternalFamilyKey</mca:CSharpValue>
+                </p1:InArgument>
+              </ea:LoadRuleParameters.ExternalFamilyKey>
+              <ea:LoadRuleParameters.Family>
+                <p1:OutArgument x:TypeArguments="tcm:tcFamily">
+                  <mca:CSharpReference x:TypeArguments="tcm:tcFamily">GlobalTCFamily</mca:CSharpReference>
+                </p1:OutArgument>
+              </ea:LoadRuleParameters.Family>
+              <ea:LoadRuleParameters.RuleResultsArg>
+                <p1:InOutArgument x:TypeArguments="ea:RuleResultArgument">
+                  <mca:CSharpReference x:TypeArguments="ea:RuleResultArgument">GlobalRulesResultArgument</mca:CSharpReference>
+                </p1:InOutArgument>
+              </ea:LoadRuleParameters.RuleResultsArg>
+              <ea:LoadRuleParameters.TransactionKey>
+                <p1:InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String">GlobalTransactionKey</mca:CSharpValue>
+                </p1:InArgument>
+              </ea:LoadRuleParameters.TransactionKey>
+            </ea:LoadRuleParameters>
+            <p1:DoWhile sap2010:WorkflowViewState.IdRef="DoWhile_1">
+              <p1:DoWhile.Condition>
+                <mca:CSharpValue x:TypeArguments="x:Boolean">GlobalRulesResultArgument.HasOutputChanged == true</mca:CSharpValue>
+              </p1:DoWhile.Condition>
+              <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <p1:Assign.To>
+                    <p1:OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32">GlobalRulesResultArgument.Iteration</mca:CSharpReference>
+                    </p1:OutArgument>
+                  </p1:Assign.To>
+                  <p1:Assign.Value>
+                    <p1:InArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpValue x:TypeArguments="x:Int32">GlobalRulesResultArgument.Iteration + 1</mca:CSharpValue>
+                    </p1:InArgument>
+                  </p1:Assign.Value>
+                </p1:Assign>
+                <p1:Assign DisplayName="Reset the output to indicate no new knowledge" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <p1:Assign.To>
+                    <p1:OutArgument x:TypeArguments="x:Boolean">
+                      <mca:CSharpReference x:TypeArguments="x:Boolean">GlobalRulesResultArgument.HasOutputChanged</mca:CSharpReference>
+                    </p1:OutArgument>
+                  </p1:Assign.To>
+                  <p1:Assign.Value>
+                    <p1:InArgument x:TypeArguments="x:Boolean">False</p1:InArgument>
+                  </p1:Assign.Value>
+                </p1:Assign>
+                <p1:Parallel sap2010:WorkflowViewState.IdRef="Parallel_1">
+                  <ea:FamilyMemberCountAsync sap2010:WorkflowViewState.IdRef="FamilyMemberCountAsync_1">
+                    <ea:FamilyMemberCountAsync.Family>
+                      <p1:InArgument x:TypeArguments="tcm:tcFamily">
+                        <mca:CSharpValue x:TypeArguments="tcm:tcFamily">GlobalTCFamily</mca:CSharpValue>
+                      </p1:InArgument>
+                    </ea:FamilyMemberCountAsync.Family>
+                    <ea:FamilyMemberCountAsync.RuleOutputCache>
+                      <p1:InOutArgument x:TypeArguments="tcm:tcComplianceEntity">
+                        <mca:CSharpReference x:TypeArguments="tcm:tcComplianceEntity">GlobalComplianceEntity</mca:CSharpReference>
+                      </p1:InOutArgument>
+                    </ea:FamilyMemberCountAsync.RuleOutputCache>
+                    <ea:FamilyMemberCountAsync.RuleResultArgs>
+                      <p1:InOutArgument x:TypeArguments="ea:RuleResultArgument">
+                        <mca:CSharpReference x:TypeArguments="ea:RuleResultArgument">GlobalRulesResultArgument</mca:CSharpReference>
+                      </p1:InOutArgument>
+                    </ea:FamilyMemberCountAsync.RuleResultArgs>
+                    <ea:FamilyMemberCountAsync.UnityContainer>
+                      <p1:InArgument x:TypeArguments="u1:IUnityContainer">
+                        <mca:CSharpValue x:TypeArguments="u1:IUnityContainer">GlobalUnityContainer</mca:CSharpValue>
+                      </p1:InArgument>
+                    </ea:FamilyMemberCountAsync.UnityContainer>
+                  </ea:FamilyMemberCountAsync>
+                  <ea:GrossAssetIncomeAsync sap2010:WorkflowViewState.IdRef="GrossAssetIncomeAsync_1">
+                    <ea:GrossAssetIncomeAsync.Family>
+                      <p1:InArgument x:TypeArguments="tcm:tcFamily">
+                        <mca:CSharpValue x:TypeArguments="tcm:tcFamily">GlobalTCFamily</mca:CSharpValue>
+                      </p1:InArgument>
+                    </ea:GrossAssetIncomeAsync.Family>
+                    <ea:GrossAssetIncomeAsync.RuleOutputCache>
+                      <p1:InOutArgument x:TypeArguments="tcm:tcComplianceEntity">
+                        <mca:CSharpReference x:TypeArguments="tcm:tcComplianceEntity">GlobalComplianceEntity</mca:CSharpReference>
+                      </p1:InOutArgument>
+                    </ea:GrossAssetIncomeAsync.RuleOutputCache>
+                    <ea:GrossAssetIncomeAsync.RuleResultArgs>
+                      <p1:InOutArgument x:TypeArguments="ea:RuleResultArgument">
+                        <mca:CSharpReference x:TypeArguments="ea:RuleResultArgument">GlobalRulesResultArgument</mca:CSharpReference>
+                      </p1:InOutArgument>
+                    </ea:GrossAssetIncomeAsync.RuleResultArgs>
+                    <ea:GrossAssetIncomeAsync.UnityContainer>
+                      <p1:InArgument x:TypeArguments="u1:IUnityContainer">
+                        <mca:CSharpValue x:TypeArguments="u1:IUnityContainer">GlobalUnityContainer</mca:CSharpValue>
+                      </p1:InArgument>
+                    </ea:GrossAssetIncomeAsync.UnityContainer>
+                  </ea:GrossAssetIncomeAsync>
+                  <ea:GrossNonAssetIncomeAsync sap2010:WorkflowViewState.IdRef="GrossNonAssetIncomeAsync_1">
+                    <ea:GrossNonAssetIncomeAsync.Family>
+                      <p1:InArgument x:TypeArguments="tcm:tcFamily">
+                        <mca:CSharpValue x:TypeArguments="tcm:tcFamily">GlobalTCFamily</mca:CSharpValue>
+                      </p1:InArgument>
+                    </ea:GrossNonAssetIncomeAsync.Family>
+                    <ea:GrossNonAssetIncomeAsync.RuleOutputCache>
+                      <p1:InOutArgument x:TypeArguments="tcm:tcComplianceEntity">
+                        <mca:CSharpReference x:TypeArguments="tcm:tcComplianceEntity">GlobalComplianceEntity</mca:CSharpReference>
+                      </p1:InOutArgument>
+                    </ea:GrossNonAssetIncomeAsync.RuleOutputCache>
+                    <ea:GrossNonAssetIncomeAsync.RuleResultArgs>
+                      <p1:InOutArgument x:TypeArguments="ea:RuleResultArgument">
+                        <mca:CSharpReference x:TypeArguments="ea:RuleResultArgument">GlobalRulesResultArgument</mca:CSharpReference>
+                      </p1:InOutArgument>
+                    </ea:GrossNonAssetIncomeAsync.RuleResultArgs>
+                    <ea:GrossNonAssetIncomeAsync.UnityContainer>
+                      <p1:InArgument x:TypeArguments="u1:IUnityContainer">
+                        <mca:CSharpValue x:TypeArguments="u1:IUnityContainer">GlobalUnityContainer</mca:CSharpValue>
+                      </p1:InArgument>
+                    </ea:GrossNonAssetIncomeAsync.UnityContainer>
+                  </ea:GrossNonAssetIncomeAsync>
+                </p1:Parallel>
+              </p1:Sequence>
+            </p1:DoWhile>
+          </p1:Sequence>
+        </p1:PickBranch.Trigger>
+        <SendReply DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
+          <SendReply.Request>
+            <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="IsFamilyAndUnitEligible" ServiceContractName="p:IService">
+              <Receive.CorrelationInitializers>
+                <RequestReplyCorrelationInitializer>
+                  <RequestReplyCorrelationInitializer.CorrelationHandle>
+                    <p1:InArgument x:TypeArguments="CorrelationHandle">
+                      <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+                    </p1:InArgument>
+                  </RequestReplyCorrelationInitializer.CorrelationHandle>
+                </RequestReplyCorrelationInitializer>
+              </Receive.CorrelationInitializers>
+              <ReceiveParametersContent>
+                <p1:OutArgument x:TypeArguments="x:String" x:Key="TransactionKey">
+                  <mca:CSharpReference x:TypeArguments="x:String">GlobalTransactionKey</mca:CSharpReference>
+                </p1:OutArgument>
+                <p1:OutArgument x:TypeArguments="x:String" x:Key="ExternalFamilyKey">
+                  <mca:CSharpReference x:TypeArguments="x:String">GlobalExternalFamilyKey</mca:CSharpReference>
+                </p1:OutArgument>
+                <p1:OutArgument x:TypeArguments="x:String" x:Key="ExternalUnitKey">
+                  <mca:CSharpReference x:TypeArguments="x:String">GlobalExternalUnitKey</mca:CSharpReference>
+                </p1:OutArgument>
+                <p1:OutArgument x:TypeArguments="x:String" x:Key="UtilityAllowance">
+                  <mca:CSharpReference x:TypeArguments="x:String">GlobalUtilityAllowance</mca:CSharpReference>
+                </p1:OutArgument>
+              </ReceiveParametersContent>
+            </Receive>
+          </SendReply.Request>
+          <SendParametersContent>
+            <p1:InArgument x:TypeArguments="x:String" x:Key="TransactionKey">
+              <mca:CSharpValue x:TypeArguments="x:String">GlobalTransactionKey</mca:CSharpValue>
+            </p1:InArgument>
+          </SendParametersContent>
+        </SendReply>
+      </p1:PickBranch>
+    </p1:Pick>
+    <sads:DebugSymbol.Symbol>d3NDOlxQcm9qZWN0c1xFbGl0ZVRheENyZWRpdHNTZXJ2aWNlXFRDT25pb25TZXJ2aWNlXFRheENyZWRpdC5JbmZyYXN0cnVjdHVyZS5Xb3JrZmxvd1NlcnZpY2VzXFRheENyZWRpdFNlcnZpY2VzLnhhbWx4NxEDpQIRAQESBaMCDwECEweiAhcBAxkPGVkBUR4PHlkBRiMPI1kBOygPKFkBMC0PLVkBJTIPMnIBGjcPN1UBDzwPPHMBBEEL/gEZAX6AAgmhAhUBXIICDZoCFwKIA3QNeigC/AJ7DYYBMgLlAocBDZwBJQK4Ap0BDf0BGgF/ngIPngJhAV2XAhOXAm8CtQOOAhOOAm0CqgOUAhOUAm4CnwOHAheHAmQClAORAhORAnACiQN3E3d1Av0CgwETgwFlAvECfhN+aALmApQBE5QBfwLaApkBE5kBZQLPAooBE4oBaALEAo8BE48BawK5Ap8BEZ8BggECrQKhAQ/8AR0CgAGiARGtAR0ClgKuARG3AR0CiQK4ARH7AR8CgQGqAReqAXsCogKlARelAX8ClwK1AUC1AUUClQKxARexAYgBAooCuQETzgEvAtwBzwET5AEuAq8B5QET+gExAoIBwQEZwQGDAQL+AcYBGcYBhQEC8wHLARnLAXUC6AG8ARm8AWkC3QHXARnXAYMBAtEB3AEZ3AGFAQLGAeEBGeEBdQK7AdIBGdIBaQKwAe0BGe0BgwECpAHyARnyAYUBApkB9wEZ9wF1Ao4B6AEZ6AFpAoMB</sads:DebugSymbol.Symbol>
+  </p1:Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="UnityRegisterActivity_1" sap:VirtualizedContainerService.HintSize="842,22" />
+      <sap2010:ViewStateData Id="TransferCertifcationToTaxCredit_1" sap:VirtualizedContainerService.HintSize="842,22" />
+      <sap2010:ViewStateData Id="LoadRuleParameters_1" sap:VirtualizedContainerService.HintSize="842,22" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="794,62" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="794,62" />
+      <sap2010:ViewStateData Id="FamilyMemberCountAsync_1" sap:VirtualizedContainerService.HintSize="200,40" />
+      <sap2010:ViewStateData Id="GrossAssetIncomeAsync_1" sap:VirtualizedContainerService.HintSize="200,40" />
+      <sap2010:ViewStateData Id="GrossNonAssetIncomeAsync_1" sap:VirtualizedContainerService.HintSize="200,40" />
+      <sap2010:ViewStateData Id="Parallel_1" sap:VirtualizedContainerService.HintSize="794,86" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="816,414">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="DoWhile_1" sap:VirtualizedContainerService.HintSize="842,578" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="864,1014">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="842,86" />
+      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="PickBranch_1" sap:VirtualizedContainerService.HintSize="894,1298" />
+      <sap2010:ViewStateData Id="Pick_1" sap:VirtualizedContainerService.HintSize="1008,1344" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="1030,1468">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="1060,1538" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</WorkflowService>

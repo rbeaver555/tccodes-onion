@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0817063-4029-41D0-9124-F8008D00CE5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxCredit.Core</RootNamespace>
+    <AssemblyName>TaxCredit.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DomainServices\AssetFilters.cs" />
+    <Compile Include="DomainServices\Constants.cs" />
+    <Compile Include="DomainServices\GrossAssetIncomeAmountCalculationStandard.cs" />
+    <Compile Include="DomainServices\FamilySizeCalculationStandard.cs" />
+    <Compile Include="DomainServices\GrossIncomeCalculationStandard.cs" />
+    <Compile Include="DomainServices\IncomeFilters.cs" />
+    <Compile Include="DomainServices\TotalAssetCalculationStandard.cs" />
+    <Compile Include="Interfaces\DomainServices\IAssetFilters.cs" />
+    <Compile Include="Interfaces\DomainServices\IGrossAssetIncomeAmountCalculation.cs" />
+    <Compile Include="Interfaces\DomainServices\IGrossIncomeCalculation.cs" />
+    <Compile Include="Interfaces\DomainServices\IIncomeFilters.cs" />
+    <Compile Include="Interfaces\DomainServices\ITotalAssetCalculation.cs" />
+    <Compile Include="Interfaces\Repositories\IBaseRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDTIncomeTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IIncomeTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ISettingsRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ISpecialStatusRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IAssetRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDTAssetRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDTFamilyMemberRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDTFamilyMemberStatusRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDTFamilyRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDTIncomeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDTSpecialStatusRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDTStudentStatusRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IFamilyMemberRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IFamilyMemberStatusRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IFamilyRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IGenderRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IIncomeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IStudentStatusRepository.cs" />
+    <Compile Include="Interfaces\DomainServices\IFamilySizeCalculation.cs" />
+    <Compile Include="Interfaces\Services\ITransferService.cs" />
+    <Compile Include="Interfaces\UnitOfWork\IComplianceCalculationUnitOfWork.cs" />
+    <Compile Include="Models\Generated\tcAGMI.cs" />
+    <Compile Include="Models\Generated\tcAsset.cs" />
+    <Compile Include="Models\Generated\tcBuilding.cs" />
+    <Compile Include="Models\Generated\tcComplianceEntity.cs" />
+    <Compile Include="Models\Generated\tcComplianceEntityRelationship.cs" />
+    <Compile Include="Models\Generated\tcComplianceEntityType.cs" />
+    <Compile Include="Models\Generated\tcComplianceProgram.cs" />
+    <Compile Include="Models\Generated\tcComplianceRentRestrictionIncomeLimit.cs" />
+    <Compile Include="Models\Generated\tcComplianceRule.cs" />
+    <Compile Include="Models\Generated\tcComplianceRuleTarget.cs" />
+    <Compile Include="Models\Generated\tcDelinquentRentColumn.cs" />
+    <Compile Include="Models\Generated\tcDTAlarm.cs" />
+    <Compile Include="Models\Generated\tcDTAsset.cs" />
+    <Compile Include="Models\Generated\tcDTBuilding.cs" />
+    <Compile Include="Models\Generated\tcDTBuildingComplianceReport.cs" />
+    <Compile Include="Models\Generated\tcDTEligibility.cs" />
+    <Compile Include="Models\Generated\tcDTFamily.cs" />
+    <Compile Include="Models\Generated\tcDTFamilyMember.cs" />
+    <Compile Include="Models\Generated\tcDTFamilyMemberStatu.cs" />
+    <Compile Include="Models\Generated\tcDTIncome.cs" />
+    <Compile Include="Models\Generated\tcDTIncomeType.cs" />
+    <Compile Include="Models\Generated\tcDTMedianIncome.cs" />
+    <Compile Include="Models\Generated\tcDTMinimumIncomeLimit.cs" />
+    <Compile Include="Models\Generated\tcDTMinimumSetAsideType.cs" />
+    <Compile Include="Models\Generated\tcDTProperty.cs" />
+    <Compile Include="Models\Generated\tcDTPropertyComplianceReport.cs" />
+    <Compile Include="Models\Generated\tcDTRentRestrictionIncomeLimit.cs" />
+    <Compile Include="Models\Generated\tcDTSpecialStatu.cs" />
+    <Compile Include="Models\Generated\tcDTStudentStatu.cs" />
+    <Compile Include="Models\Generated\tcDTTIC.cs" />
+    <Compile Include="Models\Generated\tcDTTransactionType.cs" />
+    <Compile Include="Models\Generated\tcDTUnit.cs" />
+    <Compile Include="Models\Generated\tcEliteKeyMap.cs" />
+    <Compile Include="Models\Generated\tcFamily.cs" />
+    <Compile Include="Models\Generated\tcFamilyMember.cs" />
+    <Compile Include="Models\Generated\tcFamilyMemberStatu.cs" />
+    <Compile Include="Models\Generated\tcGender.cs" />
+    <Compile Include="Models\Generated\tcHistoricalOccupancy.cs" />
+    <Compile Include="Models\Generated\tcIncome.cs" />
+    <Compile Include="Models\Generated\tcIncomeType.cs" />
+    <Compile Include="Models\Generated\tcMedianIncome.cs" />
+    <Compile Include="Models\Generated\tcMinimumIncomeLimit.cs" />
+    <Compile Include="Models\Generated\tcMinimumSetAsideType.cs" />
+    <Compile Include="Models\Generated\tcMoveInTemp.cs" />
+    <Compile Include="Models\Generated\tcOccupancy.cs" />
+    <Compile Include="Models\Generated\tcProperty.cs" />
+    <Compile Include="Models\Generated\tcRent.cs" />
+    <Compile Include="Models\Generated\tcRentRestrictionPercent.cs" />
+    <Compile Include="Models\Generated\tcRole.cs" />
+    <Compile Include="Models\Generated\tcSetting.cs" />
+    <Compile Include="Models\Generated\tcSpecialStatu.cs" />
+    <Compile Include="Models\Generated\tcStudentStatu.cs" />
+    <Compile Include="Models\Generated\tcTIC.cs" />
+    <Compile Include="Models\Generated\tcTransactionType.cs" />
+    <Compile Include="Models\Generated\tcUniqueKeyMap.cs" />
+    <Compile Include="Models\Generated\tcUnit.cs" />
+    <Compile Include="Models\Generated\tcUnitSize.cs" />
+    <Compile Include="Models\Generated\tcUser.cs" />
+    <Compile Include="Models\Generated\tcUsersRole.cs" />
+    <Compile Include="Models\tcComplianceEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplicationServices\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
