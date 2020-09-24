@@ -11,6 +11,8 @@ namespace TaxCredit.Tests.Core.DomainServices
     [TestClass]
     public class TotalAssetCalculationStandardTest
     {
+
+        //test method
         [TestMethod]
         public void NoSpecialCircumStances_ShouldCalculateto10000()
         {
