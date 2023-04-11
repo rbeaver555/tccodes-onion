@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EliteTaxCreditModelStoreContainer" CdmEntityContainer="EliteTaxCreditEntities">
+    <EntitySetMapping Name="tcAGMIs">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcAGMI">
+        <MappingFragment StoreEntitySet="tcAGMI">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="AGMI40FamilyCount1" ColumnName="AGMI40FamilyCount1" />
+          <ScalarProperty Name="AGMI40FamilyCount2" ColumnName="AGMI40FamilyCount2" />
+          <ScalarProperty Name="AGMI40FamilyCount3" ColumnName="AGMI40FamilyCount3" />
+          <ScalarProperty Name="AGMI40FamilyCount4" ColumnName="AGMI40FamilyCount4" />
+          <ScalarProperty Name="AGMI40FamilyCount5" ColumnName="AGMI40FamilyCount5" />
+          <ScalarProperty Name="AGMI40FamilyCount6" ColumnName="AGMI40FamilyCount6" />
+          <ScalarProperty Name="AGMI40FamilyCount7" ColumnName="AGMI40FamilyCount7" />
+          <ScalarProperty Name="AGMI40FamilyCount8" ColumnName="AGMI40FamilyCount8" />
+          <ScalarProperty Name="AGMI50FamilyCount1" ColumnName="AGMI50FamilyCount1" />
+          <ScalarProperty Name="AGMI50FamilyCount2" ColumnName="AGMI50FamilyCount2" />
+          <ScalarProperty Name="AGMI50FamilyCount3" ColumnName="AGMI50FamilyCount3" />
+          <ScalarProperty Name="AGMI50FamilyCount4" ColumnName="AGMI50FamilyCount4" />
+          <ScalarProperty Name="AGMI50FamilyCount5" ColumnName="AGMI50FamilyCount5" />
+          <ScalarProperty Name="AGMI50FamilyCount6" ColumnName="AGMI50FamilyCount6" />
+          <ScalarProperty Name="AGMI50FamilyCount7" ColumnName="AGMI50FamilyCount7" />
+          <ScalarProperty Name="AGMI50FamilyCount8" ColumnName="AGMI50FamilyCount8" />
+          <ScalarProperty Name="AGMI60FamilyCount1" ColumnName="AGMI60FamilyCount1" />
+          <ScalarProperty Name="AGMI60FamilyCount2" ColumnName="AGMI60FamilyCount2" />
+          <ScalarProperty Name="AGMI60FamilyCount3" ColumnName="AGMI60FamilyCount3" />
+          <ScalarProperty Name="AGMI60FamilyCount4" ColumnName="AGMI60FamilyCount4" />
+          <ScalarProperty Name="AGMI60FamilyCount5" ColumnName="AGMI60FamilyCount5" />
+          <ScalarProperty Name="AGMI60FamilyCount6" ColumnName="AGMI60FamilyCount6" />
+          <ScalarProperty Name="AGMI60FamilyCount7" ColumnName="AGMI60FamilyCount7" />
+          <ScalarProperty Name="AGMI60FamilyCount8" ColumnName="AGMI60FamilyCount8" />
+          <ScalarProperty Name="fkBuilding" ColumnName="fkBuilding" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcAssets">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcAsset">
+        <MappingFragment StoreEntitySet="tcAssets">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkFamilymember" ColumnName="fkFamilymember" />
+          <ScalarProperty Name="AssetDescription" ColumnName="AssetDescription" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="WithdrawlPenalty" ColumnName="WithdrawlPenalty" />
+          <ScalarProperty Name="AnnualIncome" ColumnName="AnnualIncome" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcBuildings">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcBuilding">
+        <MappingFragment StoreEntitySet="tcBuilding">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="BIN" ColumnName="BIN" />
+          <ScalarProperty Name="BuildingDescription" ColumnName="BuildingDescription" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="fkProperty" ColumnName="fkProperty" />
+          <ScalarProperty Name="PlacedInServiceDate" ColumnName="PlacedInServiceDate" />
+          <ScalarProperty Name="PrimarySetAsideSFPercentage" ColumnName="PrimarySetAsideSFPercentage" />
+          <ScalarProperty Name="PrimarySetAsideUTPercentage" ColumnName="PrimarySetAsideUTPercentage" />
+          <ScalarProperty Name="SecondarySetAsideSFPercentage" ColumnName="SecondarySetAsideSFPercentage" />
+          <ScalarProperty Name="SecondarySetAsideUTPercentage" ColumnName="SecondarySetAsideUTPercentage" />
+          <ScalarProperty Name="DeepRentSkewingUTPCount" ColumnName="DeepRentSkewingUTPCount" />
+          <ScalarProperty Name="DeepRentSkewingSFCount" ColumnName="DeepRentSkewingSFCount" />
+          <ScalarProperty Name="PrimarySetAsideRequiredSF" ColumnName="PrimarySetAsideRequiredSF" />
+          <ScalarProperty Name="PrimarySetAsideRequiredUT" ColumnName="PrimarySetAsideRequiredUT" />
+          <ScalarProperty Name="SecondarySetAsideRequiredSF" ColumnName="SecondarySetAsideRequiredSF" />
+          <ScalarProperty Name="SecondarySetAsideRequiredUT" ColumnName="SecondarySetAsideRequiredUT" />
+          <ScalarProperty Name="DeepRentSkewingRequiredUT" ColumnName="DeepRentSkewingRequiredUT" />
+          <ScalarProperty Name="DeepRentSkewingRequiredSF" ColumnName="DeepRentSkewingRequiredSF" />
+          <ScalarProperty Name="FirstYearApplicableFractionSFPercentage" ColumnName="FirstYearApplicableFractionSFPercentage" />
+          <ScalarProperty Name="FirstYearApplicableFractionUTPercentage" ColumnName="FirstYearApplicableFractionUTPercentage" />
+          <ScalarProperty Name="CreditAllocationUTPercentage" ColumnName="CreditAllocationUTPercentage" />
+          <ScalarProperty Name="TotalSquareFootage" ColumnName="TotalSquareFootage" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="PrimaryCompliance" ColumnName="PrimaryCompliance" />
+          <ScalarProperty Name="SecondaryCompliance" ColumnName="SecondaryCompliance" />
+          <ScalarProperty Name="PrimaryComplianceUnits" ColumnName="PrimaryComplianceUnits" />
+          <ScalarProperty Name="PrimaryComplianceSquareFeet" ColumnName="PrimaryComplianceSquareFeet" />
+          <ScalarProperty Name="SecondaryComplianceUnits" ColumnName="SecondaryComplianceUnits" />
+          <ScalarProperty Name="SecondaryComplianceSquareFeet" ColumnName="SecondaryComplianceSquareFeet" />
+          <ScalarProperty Name="fkPrimarySetAside" ColumnName="fkPrimarySetAside" />
+          <ScalarProperty Name="fkSecondarySetAside" ColumnName="fkSecondarySetAside" />
+          <ScalarProperty Name="DeepRentSkew" ColumnName="DeepRentSkew" />
+          <ScalarProperty Name="TaxCreditPercentage" ColumnName="TaxCreditPercentage" />
+          <ScalarProperty Name="fkMinimumIncomeLimit" ColumnName="fkMinimumIncomeLimit" />
+          <ScalarProperty Name="RentFloor" ColumnName="RentFloor" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcComplianceEntities">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcComplianceEntity">
+        <MappingFragment StoreEntitySet="tcComplianceEntity">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkComplianceEntityRelationship" ColumnName="fkComplianceEntityRelationship" />
+          <ScalarProperty Name="fkComplianceEntityType" ColumnName="fkComplianceEntityType" />
+          <ScalarProperty Name="fkBuilding" ColumnName="fkBuilding" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="AGMI40FamilyCount1" ColumnName="AGMI40FamilyCount1" />
+          <ScalarProperty Name="AGMI40FamilyCount2" ColumnName="AGMI40FamilyCount2" />
+          <ScalarProperty Name="AGMI40FamilyCount3" ColumnName="AGMI40FamilyCount3" />
+          <ScalarProperty Name="AGMI40FamilyCount4" ColumnName="AGMI40FamilyCount4" />
+          <ScalarProperty Name="AGMI40FamilyCount5" ColumnName="AGMI40FamilyCount5" />
+          <ScalarProperty Name="AGMI40FamilyCount6" ColumnName="AGMI40FamilyCount6" />
+          <ScalarProperty Name="AGMI40FamilyCount7" ColumnName="AGMI40FamilyCount7" />
+          <ScalarProperty Name="AGMI40FamilyCount8" ColumnName="AGMI40FamilyCount8" />
+          <ScalarProperty Name="AGMI50FamilyCount1" ColumnName="AGMI50FamilyCount1" />
+          <ScalarProperty Name="AGMI50FamilyCount2" ColumnName="AGMI50FamilyCount2" />
+          <ScalarProperty Name="AGMI50FamilyCount3" ColumnName="AGMI50FamilyCount3" />
+          <ScalarProperty Name="AGMI50FamilyCount4" ColumnName="AGMI50FamilyCount4" />
+          <ScalarProperty Name="AGMI50FamilyCount5" ColumnName="AGMI50FamilyCount5" />
+          <ScalarProperty Name="AGMI50FamilyCount6" ColumnName="AGMI50FamilyCount6" />
+          <ScalarProperty Name="AGMI50FamilyCount7" ColumnName="AGMI50FamilyCount7" />
+          <ScalarProperty Name="AGMI50FamilyCount8" ColumnName="AGMI50FamilyCount8" />
+          <ScalarProperty Name="AGMI60FamilyCount1" ColumnName="AGMI60FamilyCount1" />
+          <ScalarProperty Name="AGMI60FamilyCount2" ColumnName="AGMI60FamilyCount2" />
+          <ScalarProperty Name="AGMI60FamilyCount3" ColumnName="AGMI60FamilyCount3" />
+          <ScalarProperty Name="AGMI60FamilyCount4" ColumnName="AGMI60FamilyCount4" />
+          <ScalarProperty Name="AGMI60FamilyCount5" ColumnName="AGMI60FamilyCount5" />
+          <ScalarProperty Name="AGMI60FamilyCount6" ColumnName="AGMI60FamilyCount6" />
+          <ScalarProperty Name="AGMI60FamilyCount7" ColumnName="AGMI60FamilyCount7" />
+          <ScalarProperty Name="AGMI60FamilyCount8" ColumnName="AGMI60FamilyCount8" />
+          <ScalarProperty Name="GrossIncome" ColumnName="GrossIncome" />
+          <ScalarProperty Name="GrossAssets" ColumnName="GrossAssets" />
+          <ScalarProperty Name="TotalIncome" ColumnName="TotalIncome" />
+          <ScalarProperty Name="IsFamilyEligible" ColumnName="IsFamilyEligible" />
+          <ScalarProperty Name="PrimarySetAsideType" ColumnName="PrimarySetAsideType" />
+          <ScalarProperty Name="PrimaryUnitCount" ColumnName="PrimaryUnitCount" />
+          <ScalarProperty Name="PrimaryFootageCount" ColumnName="PrimaryFootageCount" />
+          <ScalarProperty Name="PrimarySetAsideRequiredUnitCount" ColumnName="PrimarySetAsideRequiredUnitCount" />
+          <ScalarProperty Name="PrimarySetAsideRequiredFootageCount" ColumnName="PrimarySetAsideRequiredFootageCount" />
+          <ScalarProperty Name="PrimaryFootagePCT" ColumnName="PrimaryFootagePCT" />
+          <ScalarProperty Name="PrimaryUnitPCT" ColumnName="PrimaryUnitPCT" />
+          <ScalarProperty Name="PrimaryApplicableFractionDroped" ColumnName="PrimaryApplicableFractionDroped" />
+          <ScalarProperty Name="SecondarySetAsideType" ColumnName="SecondarySetAsideType" />
+          <ScalarProperty Name="SecondaryUnitCount" ColumnName="SecondaryUnitCount" />
+          <ScalarProperty Name="SEcondaryFootageCount" ColumnName="SEcondaryFootageCount" />
+          <ScalarProperty Name="SecondarySetAsideRequiredUnitCount" ColumnName="SecondarySetAsideRequiredUnitCount" />
+          <ScalarProperty Name="SecondarySetAsideRequiredFootageCount" ColumnName="SecondarySetAsideRequiredFootageCount" />
+          <ScalarProperty Name="SecondaryUnitPCT" ColumnName="SecondaryUnitPCT" />
+          <ScalarProperty Name="SecondaryFootagePCT" ColumnName="SecondaryFootagePCT" />
+          <ScalarProperty Name="SecondaryApplicableFractionDroped" ColumnName="SecondaryApplicableFractionDroped" />
+          <ScalarProperty Name="DeepRentSkewAFUnitCount" ColumnName="DeepRentSkewAFUnitCount" />
+          <ScalarProperty Name="DeepRentSkewAFFootageCount" ColumnName="DeepRentSkewAFFootageCount" />
+          <ScalarProperty Name="DeepRentSetAsideRequiredUnitCount" ColumnName="DeepRentSetAsideRequiredUnitCount" />
+          <ScalarProperty Name="DeepRentSetAsideRequiredFootageCount" ColumnName="DeepRentSetAsideRequiredFootageCount" />
+          <ScalarProperty Name="TotalSquareFootage" ColumnName="TotalSquareFootage" />
+          <ScalarProperty Name="CreditAllocationAvaliableUT" ColumnName="CreditAllocationAvaliableUT" />
+          <ScalarProperty Name="CreditAllocationUTPercentage" ColumnName="CreditAllocationUTPercentage" />
+          <ScalarProperty Name="NumberofEligibleMembers" ColumnName="NumberofEligibleMembers" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AGMI140Percent" ColumnName="AGMI140Percent" />
+          <ScalarProperty Name="isFamilyOverIncome" ColumnName="isFamilyOverIncome" />
+          <ScalarProperty Name="NeedAvailableUnitRule" ColumnName="NeedAvailableUnitRule" />
+          <ScalarProperty Name="AvailableMarketRentTics" ColumnName="AvailableMarketRentTics" />
+          <ScalarProperty Name="StudentValidException" ColumnName="StudentValidException" />
+          <ScalarProperty Name="CurrentIncomeLimitFamilySize" ColumnName="CurrentIncomeLimitFamilySize" />
+          <ScalarProperty Name="IncomeRestrictionMet" ColumnName="IncomeRestrictionMet" />
+          <ScalarProperty Name="IncomeRestrictionPercentage" ColumnName="IncomeRestrictionPercentage" />
+          <ScalarProperty Name="TotalCashValueofAssets" ColumnName="TotalCashValueofAssets" />
+          <ScalarProperty Name="TotalAnnualIncomeofAssets" ColumnName="TotalAnnualIncomeofAssets" />
+          <ScalarProperty Name="ImputedIncomefromAssets" ColumnName="ImputedIncomefromAssets" />
+          <ScalarProperty Name="MaximumRentLimit" ColumnName="MaximumRentLimit" />
+          <ScalarProperty Name="MoveInDate" ColumnName="MoveInDate" />
+          <ScalarProperty Name="IsUnitTransfer" ColumnName="IsUnitTransfer" />
+          <ScalarProperty Name="HouseholdSizeAtMoveIn" ColumnName="HouseholdSizeAtMoveIn" />
+          <ScalarProperty Name="IncomeLimitAtMoveIn" ColumnName="IncomeLimitAtMoveIn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcComplianceEntityRelationships">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcComplianceEntityRelationship">
+        <MappingFragment StoreEntitySet="tcComplianceEntityRelationship">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="ComplianceEntityRelationship" ColumnName="ComplianceEntityRelationship" />
+          <ScalarProperty Name="fkComplianceEntity" ColumnName="fkComplianceEntity" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcComplianceEntityTypes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcComplianceEntityType">
+        <MappingFragment StoreEntitySet="tcComplianceEntityType">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="ComplianceEntityType" ColumnName="ComplianceEntityType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcCompliancePrograms">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcComplianceProgram">
+        <MappingFragment StoreEntitySet="tcComplianceProgram">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="ComplianceProgram" ColumnName="ComplianceProgram" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcComplianceRentRestrictionIncomeLimits">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcComplianceRentRestrictionIncomeLimit">
+        <MappingFragment StoreEntitySet="tcComplianceRentRestrictionIncomeLimit">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fktcComplianceEntity" ColumnName="fktcComplianceEntity" />
+          <ScalarProperty Name="RentRestrictionPercent" ColumnName="RentRestrictionPercent" />
+          <ScalarProperty Name="IncomeLimit" ColumnName="IncomeLimit" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MaxRent" ColumnName="MaxRent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcComplianceRules">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcComplianceRule">
+        <MappingFragment StoreEntitySet="tcComplianceRule">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="ComplianceRule" ColumnName="ComplianceRule" />
+          <ScalarProperty Name="ComplianceRuleType" ColumnName="ComplianceRuleType" />
+          <ScalarProperty Name="fkComplianceProgram" ColumnName="fkComplianceProgram" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcComplianceRuleTargets">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcComplianceRuleTarget">
+        <MappingFragment StoreEntitySet="tcComplianceRuleTarget">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="ComplianceRuleTarget" ColumnName="ComplianceRuleTarget" />
+          <ScalarProperty Name="fkComplianceRule" ColumnName="fkComplianceRule" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDelinquentRentColumns">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDelinquentRentColumn">
+        <MappingFragment StoreEntitySet="tcDelinquentRentColumn">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkUnit" ColumnName="fkUnit" />
+          <ScalarProperty Name="DelinquentRent" ColumnName="DelinquentRent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTAlarms">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTAlarm">
+        <MappingFragment StoreEntitySet="tcDTAlarms">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="fkBuilding" ColumnName="fkBuilding" />
+          <ScalarProperty Name="DateDetected" ColumnName="DateDetected" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FamilyExternalId" ColumnName="FamilyExternalId" />
+          <ScalarProperty Name="BuildingExternalId" ColumnName="BuildingExternalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTAssets">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTAsset">
+        <MappingFragment StoreEntitySet="tcDTAssets">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkFamilymember" ColumnName="fkFamilymember" />
+          <ScalarProperty Name="AssetDescription" ColumnName="AssetDescription" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="WithdrawlPenalty" ColumnName="WithdrawlPenalty" />
+          <ScalarProperty Name="AnnualIncome" ColumnName="AnnualIncome" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTBuildings">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTBuilding">
+        <MappingFragment StoreEntitySet="tcDTBuilding">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="BIN" ColumnName="BIN" />
+          <ScalarProperty Name="BuildingDescription" ColumnName="BuildingDescription" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="fkProperty" ColumnName="fkProperty" />
+          <ScalarProperty Name="PlacedInServiceDate" ColumnName="PlacedInServiceDate" />
+          <ScalarProperty Name="FirstYearApplicableFractionSFPercentage" ColumnName="FirstYearApplicableFractionSFPercentage" />
+          <ScalarProperty Name="FirstYearApplicableFractionUTPercentage" ColumnName="FirstYearApplicableFractionUTPercentage" />
+          <ScalarProperty Name="CreditAllocationUTPercentage" ColumnName="CreditAllocationUTPercentage" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="fkPrimarySetAside" ColumnName="fkPrimarySetAside" />
+          <ScalarProperty Name="fkSecondarySetAside" ColumnName="fkSecondarySetAside" />
+          <ScalarProperty Name="DeepRentSkew" ColumnName="DeepRentSkew" />
+          <ScalarProperty Name="TransactionKey" ColumnName="TransactionKey" />
+          <ScalarProperty Name="TaxCreditPercentage" ColumnName="TaxCreditPercentage" />
+          <ScalarProperty Name="fkMinimumIncomeLimit" ColumnName="fkMinimumIncomeLimit" />
+          <ScalarProperty Name="RentFloor" ColumnName="RentFloor" />
+          <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTBuildingComplianceReports">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTBuildingComplianceReport">
+        <MappingFragment StoreEntitySet="tcDTBuildingComplianceReport">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="PropertyExternalKey" ColumnName="PropertyExternalKey" />
+          <ScalarProperty Name="BuildingExternalKey" ColumnName="BuildingExternalKey" />
+          <ScalarProperty Name="PropertyDescription" ColumnName="PropertyDescription" />
+          <ScalarProperty Name="BuildingDescription" ColumnName="BuildingDescription" />
+          <ScalarProperty Name="UnitsInBuilding" ColumnName="UnitsInBuilding" />
+          <ScalarProperty Name="SquareFeetInBuilding" ColumnName="SquareFeetInBuilding" />
+          <ScalarProperty Name="UnitsOccupiedInBuilding" ColumnName="UnitsOccupiedInBuilding" />
+          <ScalarProperty Name="SquareFeetOccupiedInBuilding" ColumnName="SquareFeetOccupiedInBuilding" />
+          <ScalarProperty Name="PrimarySetAside" ColumnName="PrimarySetAside" />
+          <ScalarProperty Name="PrimaryFirstYearAFFootage" ColumnName="PrimaryFirstYearAFFootage" />
+          <ScalarProperty Name="PrimaryFirstYearAFUnit" ColumnName="PrimaryFirstYearAFUnit" />
+          <ScalarProperty Name="PrimarySetAsideFootage" ColumnName="PrimarySetAsideFootage" />
+          <ScalarProperty Name="PrimarySetAsideUnit" ColumnName="PrimarySetAsideUnit" />
+          <ScalarProperty Name="PrimaryActualFootage" ColumnName="PrimaryActualFootage" />
+          <ScalarProperty Name="PrimaryActualUnit" ColumnName="PrimaryActualUnit" />
+          <ScalarProperty Name="PrimaryCompliance" ColumnName="PrimaryCompliance" />
+          <ScalarProperty Name="SecondarySetAside" ColumnName="SecondarySetAside" />
+          <ScalarProperty Name="SecondaryFirstYearAFFootage" ColumnName="SecondaryFirstYearAFFootage" />
+          <ScalarProperty Name="SecondaryFirstYearAFUnit" ColumnName="SecondaryFirstYearAFUnit" />
+          <ScalarProperty Name="SecondarySetAsideFootage" ColumnName="SecondarySetAsideFootage" />
+          <ScalarProperty Name="SecondarySetAsideUnit" ColumnName="SecondarySetAsideUnit" />
+          <ScalarProperty Name="SecondaryActualFootage" ColumnName="SecondaryActualFootage" />
+          <ScalarProperty Name="SecondaryActualUnit" ColumnName="SecondaryActualUnit" />
+          <ScalarProperty Name="SecondaryCompliance" ColumnName="SecondaryCompliance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTEligibilities">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTEligibility">
+        <MappingFragment StoreEntitySet="tcDTEligibility">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="fkUnit" ColumnName="fkUnit" />
+          <ScalarProperty Name="fkPrimarySetAside" ColumnName="fkPrimarySetAside" />
+          <ScalarProperty Name="fkSecondarySetAside" ColumnName="fkSecondarySetAside" />
+          <ScalarProperty Name="IsFamilyEligible" ColumnName="IsFamilyEligible" />
+          <ScalarProperty Name="DeepRentSkewing" ColumnName="DeepRentSkewing" />
+          <ScalarProperty Name="MeetPrimarySetAsideAGMIRequirements" ColumnName="MeetPrimarySetAsideAGMIRequirements" />
+          <ScalarProperty Name="MeetSecondarySetAsideAGMIRequirements" ColumnName="MeetSecondarySetAsideAGMIRequirements" />
+          <ScalarProperty Name="MeetDeepRentSkewingAGMIRequirements" ColumnName="MeetDeepRentSkewingAGMIRequirements" />
+          <ScalarProperty Name="PrimarySetAsideMeetMinumumRentRequirements" ColumnName="PrimarySetAsideMeetMinumumRentRequirements" />
+          <ScalarProperty Name="SecondarySetAsideMeetMinumumRentRequirements" ColumnName="SecondarySetAsideMeetMinumumRentRequirements" />
+          <ScalarProperty Name="DeepRentSkewingMeetMinumumRentRequirements" ColumnName="DeepRentSkewingMeetMinumumRentRequirements" />
+          <ScalarProperty Name="PrimarySetAsideProjectedGrossRent" ColumnName="PrimarySetAsideProjectedGrossRent" />
+          <ScalarProperty Name="SecondarySetAsideProjectedGrossRent" ColumnName="SecondarySetAsideProjectedGrossRent" />
+          <ScalarProperty Name="DeepRentSkewingProjectedGrossRent" ColumnName="DeepRentSkewingProjectedGrossRent" />
+          <ScalarProperty Name="ProjectedUtilityAllowance" ColumnName="ProjectedUtilityAllowance" />
+          <ScalarProperty Name="PrimarySetAsideProjectedNetRent" ColumnName="PrimarySetAsideProjectedNetRent" />
+          <ScalarProperty Name="SecondarySetAsideProjectedNetRent" ColumnName="SecondarySetAsideProjectedNetRent" />
+          <ScalarProperty Name="DeepRentSkewingProjectedNetRent" ColumnName="DeepRentSkewingProjectedNetRent" />
+          <ScalarProperty Name="MeetRequiredBedroomSize" ColumnName="MeetRequiredBedroomSize" />
+          <ScalarProperty Name="NeedPrimarySetAsideResidents" ColumnName="NeedPrimarySetAsideResidents" />
+          <ScalarProperty Name="NeedSecondarySetAsideResidents" ColumnName="NeedSecondarySetAsideResidents" />
+          <ScalarProperty Name="NeedDeepSkewingResidents" ColumnName="NeedDeepSkewingResidents" />
+          <ScalarProperty Name="NeedCreditAllocationResidents" ColumnName="NeedCreditAllocationResidents" />
+          <ScalarProperty Name="WillCountTowardsTaxCreditSetAside" ColumnName="WillCountTowardsTaxCreditSetAside" />
+          <ScalarProperty Name="FamilyMemberCount" ColumnName="FamilyMemberCount" />
+          <ScalarProperty Name="FamilyExternalKey" ColumnName="FamilyExternalKey" />
+          <ScalarProperty Name="UnitExternalKey" ColumnName="UnitExternalKey" />
+          <ScalarProperty Name="TransactionKey" ColumnName="TransactionKey" />
+          <ScalarProperty Name="IncomeAtMoveIn" ColumnName="IncomeAtMoveIn" />
+          <ScalarProperty Name="IncomeRestrictionPercentage" ColumnName="IncomeRestrictionPercentage" />
+          <ScalarProperty Name="TotalCashValueofAssets" ColumnName="TotalCashValueofAssets" />
+          <ScalarProperty Name="TotalAnnualIncomeofAssets" ColumnName="TotalAnnualIncomeofAssets" />
+          <ScalarProperty Name="ImputedIncomefromAssets" ColumnName="ImputedIncomefromAssets" />
+          <ScalarProperty Name="CurrentIncomeLimitFamilySize" ColumnName="CurrentIncomeLimitFamilySize" />
+          <ScalarProperty Name="IncomeRestrictionMet" ColumnName="IncomeRestrictionMet" />
+          <ScalarProperty Name="IncomeExcedes140pct" ColumnName="IncomeExcedes140pct" />
+          <ScalarProperty Name="StudentValidException" ColumnName="StudentValidException" />
+          <ScalarProperty Name="FamilyCountAtMoveIn" ColumnName="FamilyCountAtMoveIn" />
+          <ScalarProperty Name="MaximumRentLimit" ColumnName="MaximumRentLimit" />
+          <ScalarProperty Name="MoveInDate" ColumnName="MoveInDate" />
+          <ScalarProperty Name="IncomeLimitAtMoveIn" ColumnName="IncomeLimitAtMoveIn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTFamilies">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTFamily">
+        <MappingFragment StoreEntitySet="tcDTFamily">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="IsFullTimeResidentialWorker" ColumnName="IsFullTimeResidentialWorker" />
+          <ScalarProperty Name="TransactionKey" ColumnName="TransactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTFamilyMembers">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTFamilyMember">
+        <MappingFragment StoreEntitySet="tcDTFamilyMember">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="fkFamilyMemberStatus" ColumnName="fkFamilyMemberStatus" />
+          <ScalarProperty Name="fkStudentStatus" ColumnName="fkStudentStatus" />
+          <ScalarProperty Name="fkSpecialStatus" ColumnName="fkSpecialStatus" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTFamilyMemberStatus">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTFamilyMemberStatu">
+        <MappingFragment StoreEntitySet="tcDTFamilyMemberStatus">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="FamilyMemberStatus" ColumnName="FamilyMemberStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTIncomes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTIncome">
+        <MappingFragment StoreEntitySet="tcDTIncome">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="YearlyIncomeAmount" ColumnName="YearlyIncomeAmount" />
+          <ScalarProperty Name="fkIncomeType" ColumnName="fkIncomeType" />
+          <ScalarProperty Name="fkFamilyMember" ColumnName="fkFamilyMember" />
+          <ScalarProperty Name="IncomeDescription" ColumnName="IncomeDescription" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTIncomeTypes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTIncomeType">
+        <MappingFragment StoreEntitySet="tcDTIncomeType">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="IncomeType" ColumnName="IncomeType" />
+          <ScalarProperty Name="ExternalPK" ColumnName="ExternalPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTMedianIncomes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTMedianIncome">
+        <MappingFragment StoreEntitySet="tcDTMedianIncome">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="MedianIncome1Person" ColumnName="MedianIncome1Person" />
+          <ScalarProperty Name="MedianIncome2Person" ColumnName="MedianIncome2Person" />
+          <ScalarProperty Name="MedianIncome3Person" ColumnName="MedianIncome3Person" />
+          <ScalarProperty Name="MedianIncome4Person" ColumnName="MedianIncome4Person" />
+          <ScalarProperty Name="MedianIncome5Person" ColumnName="MedianIncome5Person" />
+          <ScalarProperty Name="MedianIncome6Person" ColumnName="MedianIncome6Person" />
+          <ScalarProperty Name="MedianIncome7Person" ColumnName="MedianIncome7Person" />
+          <ScalarProperty Name="MedianIncome8Person" ColumnName="MedianIncome8Person" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="fkProperty" ColumnName="fkProperty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTMinimumIncomeLimits">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTMinimumIncomeLimit">
+        <MappingFragment StoreEntitySet="tcDTMinimumIncomeLimits">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="MinimumIncomeFormula" ColumnName="MinimumIncomeFormula" />
+          <ScalarProperty Name="MinimumIncomeFormulaCode" ColumnName="MinimumIncomeFormulaCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTMinimumSetAsideTypes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTMinimumSetAsideType">
+        <MappingFragment StoreEntitySet="tcDTMinimumSetAsideType">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="MinimumSetAsideType" ColumnName="MinimumSetAsideType" />
+          <ScalarProperty Name="MinimumSetAsideTypeCode" ColumnName="MinimumSetAsideTypeCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTProperties">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTProperty">
+        <MappingFragment StoreEntitySet="tcDTProperty">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="PropertyDescription" ColumnName="PropertyDescription" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="TransactionKey" ColumnName="TransactionKey" />
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTPropertyComplianceReports">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTPropertyComplianceReport">
+        <MappingFragment StoreEntitySet="tcDTPropertyComplianceReport">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="PropertyDescription" ColumnName="PropertyDescription" />
+          <ScalarProperty Name="NumberOfBuilding" ColumnName="NumberOfBuilding" />
+          <ScalarProperty Name="ComplianceIn2050" ColumnName="ComplianceIn2050" />
+          <ScalarProperty Name="NonComplianceIn2050" ColumnName="NonComplianceIn2050" />
+          <ScalarProperty Name="ComplianceIn4060" ColumnName="ComplianceIn4060" />
+          <ScalarProperty Name="NonComplianceIn4060" ColumnName="NonComplianceIn4060" />
+          <ScalarProperty Name="ComplianceIn2560" ColumnName="ComplianceIn2560" />
+          <ScalarProperty Name="NonComplianceIn2560" ColumnName="NonComplianceIn2560" />
+          <ScalarProperty Name="PropertyExternalKey" ColumnName="PropertyExternalKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTRentRestrictionIncomeLimits">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTRentRestrictionIncomeLimit">
+        <MappingFragment StoreEntitySet="tcDTRentRestrictionIncomeLimit">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fktcDTEligibility" ColumnName="fktcDTEligibility" />
+          <ScalarProperty Name="tcTIC" ColumnName="tcTIC" />
+          <ScalarProperty Name="RentRestrictionPercent" ColumnName="RentRestrictionPercent" />
+          <ScalarProperty Name="IncomeLimit" ColumnName="IncomeLimit" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MaxRent" ColumnName="MaxRent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTSpecialStatus">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTSpecialStatu">
+        <MappingFragment StoreEntitySet="tcDTSpecialStatus">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="SpecialStatus" ColumnName="SpecialStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTStudentStatus">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTStudentStatu">
+        <MappingFragment StoreEntitySet="tcDTStudentStatus">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="StudentStatus" ColumnName="StudentStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTTICs">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTTIC">
+        <MappingFragment StoreEntitySet="tcDTTIC">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="NextRecertificationDate" ColumnName="NextRecertificationDate" />
+          <ScalarProperty Name="FiledDate" ColumnName="FiledDate" />
+          <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />
+          <ScalarProperty Name="ValidationDate" ColumnName="ValidationDate" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="fkTransactionType" ColumnName="fkTransactionType" />
+          <ScalarProperty Name="DeepRentSkewing" ColumnName="DeepRentSkewing" />
+          <ScalarProperty Name="FamilyCountAtMoveIn" ColumnName="FamilyCountAtMoveIn" />
+          <ScalarProperty Name="GrossAssets" ColumnName="GrossAssets" />
+          <ScalarProperty Name="GrossIncome" ColumnName="GrossIncome" />
+          <ScalarProperty Name="GrossRent" ColumnName="GrossRent" />
+          <ScalarProperty Name="MaximumRentLimit" ColumnName="MaximumRentLimit" />
+          <ScalarProperty Name="OtherNonOptionalCharges" ColumnName="OtherNonOptionalCharges" />
+          <ScalarProperty Name="OutstandingBalance" ColumnName="OutstandingBalance" />
+          <ScalarProperty Name="RentAssistance" ColumnName="RentAssistance" />
+          <ScalarProperty Name="TenantPaidRent" ColumnName="TenantPaidRent" />
+          <ScalarProperty Name="TotalIncome" ColumnName="TotalIncome" />
+          <ScalarProperty Name="TotalIncomeAtMoveIn" ColumnName="TotalIncomeAtMoveIn" />
+          <ScalarProperty Name="UtilityAllowance" ColumnName="UtilityAllowance" />
+          <ScalarProperty Name="IsSection8" ColumnName="IsSection8" />
+          <ScalarProperty Name="NumberofEligibleMembers" ColumnName="NumberofEligibleMembers" />
+          <ScalarProperty Name="CountsForTaxCredit" ColumnName="CountsForTaxCredit" />
+          <ScalarProperty Name="IsMarketRent" ColumnName="IsMarketRent" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="StudentValidException" ColumnName="StudentValidException" />
+          <ScalarProperty Name="CurrentIncomeLimitFamilySize" ColumnName="CurrentIncomeLimitFamilySize" />
+          <ScalarProperty Name="IncomeRestrictionMet" ColumnName="IncomeRestrictionMet" />
+          <ScalarProperty Name="CurrentIncomeLimitBy140pct" ColumnName="CurrentIncomeLimitBy140pct" />
+          <ScalarProperty Name="IncomeExcedes140pct" ColumnName="IncomeExcedes140pct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTTransactionTypes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTTransactionType">
+        <MappingFragment StoreEntitySet="tcDTTransactionType">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="TransactionTypeCode" ColumnName="TransactionTypeCode" />
+          <ScalarProperty Name="TransactionDescription" ColumnName="TransactionDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcDTUnits">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcDTUnit">
+        <MappingFragment StoreEntitySet="tcDTUnit">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="UnitDescription" ColumnName="UnitDescription" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="fkBuilding" ColumnName="fkBuilding" />
+          <ScalarProperty Name="RoomCount" ColumnName="RoomCount" />
+          <ScalarProperty Name="SquareFeet" ColumnName="SquareFeet" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="IsStaffUnit" ColumnName="IsStaffUnit" />
+          <ScalarProperty Name="TransactionKey" ColumnName="TransactionKey" />
+          <ScalarProperty Name="UtilityAllowance" ColumnName="UtilityAllowance" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="RentRestrictionPercent" ColumnName="RentRestrictionPercent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcEliteKeyMaps">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcEliteKeyMap">
+        <MappingFragment StoreEntitySet="tcEliteKeyMap">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkUniqueKey" ColumnName="fkUniqueKey" />
+          <ScalarProperty Name="EliteKeyValue" ColumnName="EliteKeyValue" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcFamilies">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcFamily">
+        <MappingFragment StoreEntitySet="tcFamily">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="IsFamilyEligible" ColumnName="IsFamilyEligible" />
+          <ScalarProperty Name="NextRecertificationDate" ColumnName="NextRecertificationDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="IsFullTimeResidentialWorker" ColumnName="IsFullTimeResidentialWorker" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcFamilyMembers">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcFamilyMember">
+        <MappingFragment StoreEntitySet="tcFamilyMember">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="fkFamilyMemberStatus" ColumnName="fkFamilyMemberStatus" />
+          <ScalarProperty Name="fkStudentStatus" ColumnName="fkStudentStatus" />
+          <ScalarProperty Name="fkSpecialStatus" ColumnName="fkSpecialStatus" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="fkGender" ColumnName="fkGender" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="MemberNumber" ColumnName="MemberNumber" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcFamilyMemberStatus">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcFamilyMemberStatu">
+        <MappingFragment StoreEntitySet="tcFamilyMemberStatus">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="FamilyMemberStatus" ColumnName="FamilyMemberStatus" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcGenders">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcGender">
+        <MappingFragment StoreEntitySet="tcGender">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcHistoricalOccupancies">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcHistoricalOccupancy">
+        <MappingFragment StoreEntitySet="tcHistoricalOccupancies">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="fkUnit" ColumnName="fkUnit" />
+          <ScalarProperty Name="MovInDate" ColumnName="MovInDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcIncomes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcIncome">
+        <MappingFragment StoreEntitySet="tcIncome">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="YearlyIncomeAmount" ColumnName="YearlyIncomeAmount" />
+          <ScalarProperty Name="fkIncomeType" ColumnName="fkIncomeType" />
+          <ScalarProperty Name="fkFamilyMember" ColumnName="fkFamilyMember" />
+          <ScalarProperty Name="IncomeDescription" ColumnName="IncomeDescription" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcIncomeTypes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcIncomeType">
+        <MappingFragment StoreEntitySet="tcIncomeType">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="IncomeType" ColumnName="IncomeType" />
+          <ScalarProperty Name="ExternalPK" ColumnName="ExternalPK" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcMedianIncomes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcMedianIncome">
+        <MappingFragment StoreEntitySet="tcMedianIncome">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="MedianIncome1Person" ColumnName="MedianIncome1Person" />
+          <ScalarProperty Name="MedianIncome2Person" ColumnName="MedianIncome2Person" />
+          <ScalarProperty Name="MedianIncome3Person" ColumnName="MedianIncome3Person" />
+          <ScalarProperty Name="MedianIncome4Person" ColumnName="MedianIncome4Person" />
+          <ScalarProperty Name="MedianIncome5Person" ColumnName="MedianIncome5Person" />
+          <ScalarProperty Name="MedianIncome6Person" ColumnName="MedianIncome6Person" />
+          <ScalarProperty Name="MedianIncome7Person" ColumnName="MedianIncome7Person" />
+          <ScalarProperty Name="MedianIncome8Person" ColumnName="MedianIncome8Person" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="fkProperty" ColumnName="fkProperty" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcMinimumIncomeLimits">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcMinimumIncomeLimit">
+        <MappingFragment StoreEntitySet="tcMinimumIncomeLimits">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="MinimumIncomeFormula" ColumnName="MinimumIncomeFormula" />
+          <ScalarProperty Name="MinimumIncomeFormulaCode" ColumnName="MinimumIncomeFormulaCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcMinimumSetAsideTypes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcMinimumSetAsideType">
+        <MappingFragment StoreEntitySet="tcMinimumSetAsideType">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="MinimumSetAsideType" ColumnName="MinimumSetAsideType" />
+          <ScalarProperty Name="MinimumSetAsideTypeCode" ColumnName="MinimumSetAsideTypeCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcMoveInTemps">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcMoveInTemp">
+        <MappingFragment StoreEntitySet="tcMoveInTemp">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="fkUnit" ColumnName="fkUnit" />
+          <ScalarProperty Name="fkPrimarySetAside" ColumnName="fkPrimarySetAside" />
+          <ScalarProperty Name="fkSecondarySetAside" ColumnName="fkSecondarySetAside" />
+          <ScalarProperty Name="DeepRentSkewing" ColumnName="DeepRentSkewing" />
+          <ScalarProperty Name="MeetPrimarySetAsideAGMIRequirements" ColumnName="MeetPrimarySetAsideAGMIRequirements" />
+          <ScalarProperty Name="MeetSecondarySetAsideAGMIRequirements" ColumnName="MeetSecondarySetAsideAGMIRequirements" />
+          <ScalarProperty Name="MeetDeepRentSkewingAGMIRequirements" ColumnName="MeetDeepRentSkewingAGMIRequirements" />
+          <ScalarProperty Name="PrimarySetAsideMeetMinumumRentRequirements" ColumnName="PrimarySetAsideMeetMinumumRentRequirements" />
+          <ScalarProperty Name="SecondarySetAsideMeetMinumumRentRequirements" ColumnName="SecondarySetAsideMeetMinumumRentRequirements" />
+          <ScalarProperty Name="DeepRentSkewingMeetMinumumRentRequirements" ColumnName="DeepRentSkewingMeetMinumumRentRequirements" />
+          <ScalarProperty Name="PrimarySetAsideProjectedGrossRent" ColumnName="PrimarySetAsideProjectedGrossRent" />
+          <ScalarProperty Name="SecondarySetAsideProjectedGrossRent" ColumnName="SecondarySetAsideProjectedGrossRent" />
+          <ScalarProperty Name="DeepRentSkewingProjectedGrossRent" ColumnName="DeepRentSkewingProjectedGrossRent" />
+          <ScalarProperty Name="ProjectedUtilityAllowance" ColumnName="ProjectedUtilityAllowance" />
+          <ScalarProperty Name="PrimarySetAsideProjectedNetRent" ColumnName="PrimarySetAsideProjectedNetRent" />
+          <ScalarProperty Name="SecondarySetAsideProjectedNetRent" ColumnName="SecondarySetAsideProjectedNetRent" />
+          <ScalarProperty Name="DeepRentSkewingProjectedNetRent" ColumnName="DeepRentSkewingProjectedNetRent" />
+          <ScalarProperty Name="MeetRequiredBedroomSize" ColumnName="MeetRequiredBedroomSize" />
+          <ScalarProperty Name="NeedPrimarySetAsideResidents" ColumnName="NeedPrimarySetAsideResidents" />
+          <ScalarProperty Name="NeedSecondarySetAsideResidents" ColumnName="NeedSecondarySetAsideResidents" />
+          <ScalarProperty Name="NeedDeepSkewingResidents" ColumnName="NeedDeepSkewingResidents" />
+          <ScalarProperty Name="NeedCreditAllocationResidents" ColumnName="NeedCreditAllocationResidents" />
+          <ScalarProperty Name="WillCountTowardsTaxCreditSetAside" ColumnName="WillCountTowardsTaxCreditSetAside" />
+          <ScalarProperty Name="FamilyMemberCount" ColumnName="FamilyMemberCount" />
+          <ScalarProperty Name="IsMoveInFamilyEligible" ColumnName="IsMoveInFamilyEligible" />
+          <ScalarProperty Name="IncomeRestrictionPercentage" ColumnName="IncomeRestrictionPercentage" />
+          <ScalarProperty Name="IsEligibilityCall" ColumnName="IsEligibilityCall" />
+          <ScalarProperty Name="fkTransactionType" ColumnName="fkTransactionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcOccupancies">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcOccupancy">
+        <MappingFragment StoreEntitySet="tcOccupancy">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="fkUnit" ColumnName="fkUnit" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="OccupancyStartDate" ColumnName="OccupancyStartDate" />
+          <ScalarProperty Name="OccupancyEndDate" ColumnName="OccupancyEndDate" />
+          <ScalarProperty Name="MaintainApplicableFractionRule" ColumnName="MaintainApplicableFractionRule" />
+          <ScalarProperty Name="VacantUnitRule" ColumnName="VacantUnitRule" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="IsFiled" ColumnName="IsFiled" />
+          <ScalarProperty Name="AvailableUnitRule" ColumnName="AvailableUnitRule" />
+          <ScalarProperty Name="RemoveAlertRule" ColumnName="RemoveAlertRule" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="fkMinSetAsideType" ColumnName="fkMinSetAsideType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcProperties">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcProperty">
+        <MappingFragment StoreEntitySet="tcProperty">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="PropertyDescription" ColumnName="PropertyDescription" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcRents">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcRent">
+        <MappingFragment StoreEntitySet="tcRent">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="RentAmount" ColumnName="RentAmount" />
+          <ScalarProperty Name="SquareFootage" ColumnName="SquareFootage" />
+          <ScalarProperty Name="fkUnitSize" ColumnName="fkUnitSize" />
+          <ScalarProperty Name="UtilityAllowance" ColumnName="UtilityAllowance" />
+          <ScalarProperty Name="fkProperty" ColumnName="fkProperty" />
+          <ScalarProperty Name="MinimumRent" ColumnName="MinimumRent" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcRoles">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcRole">
+        <MappingFragment StoreEntitySet="tcRoles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcSettings">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcSetting">
+        <MappingFragment StoreEntitySet="tcSettings">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="HUDPassbookRate" ColumnName="HUDPassbookRate" />
+          <ScalarProperty Name="LastSuccessfulMATTransmission" ColumnName="LastSuccessfulMATTransmission" />
+          <ScalarProperty Name="NextScheduledMATTransmission" ColumnName="NextScheduledMATTransmission" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcSpecialStatus">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcSpecialStatu">
+        <MappingFragment StoreEntitySet="tcSpecialStatus">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="SpecialStatus" ColumnName="SpecialStatus" />
+          <ScalarProperty Name="SpecialStatusCode" ColumnName="SpecialStatusCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcStudentStatus">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcStudentStatu">
+        <MappingFragment StoreEntitySet="tcStudentStatus">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="StudentStatus" ColumnName="StudentStatus" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcTICs">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcTIC">
+        <MappingFragment StoreEntitySet="tcTIC">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="NextRecertificationDate" ColumnName="NextRecertificationDate" />
+          <ScalarProperty Name="FiledDate" ColumnName="FiledDate" />
+          <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />
+          <ScalarProperty Name="ValidationDate" ColumnName="ValidationDate" />
+          <ScalarProperty Name="fkFamily" ColumnName="fkFamily" />
+          <ScalarProperty Name="fkTransactionType" ColumnName="fkTransactionType" />
+          <ScalarProperty Name="fkWorkingTIC" ColumnName="fkWorkingTIC" />
+          <ScalarProperty Name="IsFiled" ColumnName="IsFiled" />
+          <ScalarProperty Name="DeepRentSkewing" ColumnName="DeepRentSkewing" />
+          <ScalarProperty Name="FamilyCountAtMoveIn" ColumnName="FamilyCountAtMoveIn" />
+          <ScalarProperty Name="GrossAssets" ColumnName="GrossAssets" />
+          <ScalarProperty Name="GrossIncome" ColumnName="GrossIncome" />
+          <ScalarProperty Name="GrossRent" ColumnName="GrossRent" />
+          <ScalarProperty Name="MaximumRentLimit" ColumnName="MaximumRentLimit" />
+          <ScalarProperty Name="OtherNonOptionalCharges" ColumnName="OtherNonOptionalCharges" />
+          <ScalarProperty Name="OutstandingBalance" ColumnName="OutstandingBalance" />
+          <ScalarProperty Name="RentAssistance" ColumnName="RentAssistance" />
+          <ScalarProperty Name="TenantPaidRent" ColumnName="TenantPaidRent" />
+          <ScalarProperty Name="TotalIncome" ColumnName="TotalIncome" />
+          <ScalarProperty Name="TotalIncomeAtMoveIn" ColumnName="TotalIncomeAtMoveIn" />
+          <ScalarProperty Name="UtilityAllowance" ColumnName="UtilityAllowance" />
+          <ScalarProperty Name="IsSection8" ColumnName="IsSection8" />
+          <ScalarProperty Name="NumberofEligibleMembers" ColumnName="NumberofEligibleMembers" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CountsForTaxCredit" ColumnName="CountsForTaxCredit" />
+          <ScalarProperty Name="IsMarketRent" ColumnName="IsMarketRent" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="TransactionKey" ColumnName="TransactionKey" />
+          <ScalarProperty Name="StudentValidException" ColumnName="StudentValidException" />
+          <ScalarProperty Name="CurrentIncomeLimitFamilySize" ColumnName="CurrentIncomeLimitFamilySize" />
+          <ScalarProperty Name="IncomeRestrictionMet" ColumnName="IncomeRestrictionMet" />
+          <ScalarProperty Name="CurrentIncomeLimitBy140pct" ColumnName="CurrentIncomeLimitBy140pct" />
+          <ScalarProperty Name="IncomeExcedes140pct" ColumnName="IncomeExcedes140pct" />
+          <ScalarProperty Name="IncomeRestrictionPercentage" ColumnName="IncomeRestrictionPercentage" />
+          <ScalarProperty Name="TotalCashValueofAssets" ColumnName="TotalCashValueofAssets" />
+          <ScalarProperty Name="TotalAnnualIncomeofAssets" ColumnName="TotalAnnualIncomeofAssets" />
+          <ScalarProperty Name="ImputedIncomefromAssets" ColumnName="ImputedIncomefromAssets" />
+          <ScalarProperty Name="MoveInDate" ColumnName="MoveInDate" />
+          <ScalarProperty Name="IncomeLimitAtMoveIn" ColumnName="IncomeLimitAtMoveIn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcTransactionTypes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcTransactionType">
+        <MappingFragment StoreEntitySet="tcTransactionType">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="TransactionTypeCode" ColumnName="TransactionTypeCode" />
+          <ScalarProperty Name="TransactionDescription" ColumnName="TransactionDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcUniqueKeyMaps">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcUniqueKeyMap">
+        <MappingFragment StoreEntitySet="tcUniqueKeyMap">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="UniqueKey" ColumnName="UniqueKey" />
+          <ScalarProperty Name="PBUType" ColumnName="PBUType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcUnits">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcUnit">
+        <MappingFragment StoreEntitySet="tcUnit">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="UnitDescription" ColumnName="UnitDescription" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="fkBuilding" ColumnName="fkBuilding" />
+          <ScalarProperty Name="fkUnitSize" ColumnName="fkUnitSize" />
+          <ScalarProperty Name="SquareFeet" ColumnName="SquareFeet" />
+          <ScalarProperty Name="IsOccupied" ColumnName="IsOccupied" />
+          <ScalarProperty Name="RentAmount" ColumnName="RentAmount" />
+          <ScalarProperty Name="UtilityAllowance" ColumnName="UtilityAllowance" />
+          <ScalarProperty Name="MinimumRent" ColumnName="MinimumRent" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ExternalKey" ColumnName="ExternalKey" />
+          <ScalarProperty Name="IsStaffUnit" ColumnName="IsStaffUnit" />
+          <ScalarProperty Name="transactionKey" ColumnName="transactionKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcUnitSizes">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcUnitSize">
+        <MappingFragment StoreEntitySet="tcUnitSize">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="UnitSize" ColumnName="UnitSize" />
+          <ScalarProperty Name="BedroomCount" ColumnName="BedroomCount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcUsers">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcUser">
+        <MappingFragment StoreEntitySet="tcUsers">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcUsersRoles">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcUsersRole">
+        <MappingFragment StoreEntitySet="tcUsersRoles">
+          <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+          <ScalarProperty Name="fkUserID" ColumnName="fkUserID" />
+          <ScalarProperty Name="fkRoleID" ColumnName="fkRoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcRentRestrictionPercents">
+      <EntityTypeMapping TypeName="EliteTaxCreditModel.tcRentRestrictionPercent">
+        <MappingFragment StoreEntitySet="tcRentRestrictionPercent">
+          <ScalarProperty Name="RentRestrictionPercent" ColumnName="RentRestrictionPercent" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
