@@ -1,0 +1,1876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EliteTaxCreditModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tcAGMI">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AGMI40FamilyCount1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount7" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount8" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount7" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount8" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount7" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount8" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="fkBuilding" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="tcBuilding" Relationship="Self.FK_AGMI_Building" FromRole="tcAGMI" ToRole="tcBuilding" />
+  </EntityType>
+  <EntityType Name="tcAsset">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkFamilymember" Type="Int32" Nullable="false" />
+    <Property Name="AssetDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="WithdrawlPenalty" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AnnualIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcFamilyMember" Relationship="Self.FK_Assets_FamilyMember" FromRole="tcAssets" ToRole="tcFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcBuilding">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BIN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BuildingDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkProperty" Type="Int32" Nullable="false" />
+    <Property Name="PlacedInServiceDate" Type="DateTime" Precision="3" />
+    <Property Name="PrimarySetAsideSFPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideUTPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideSFPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideUTPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewingUTPCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewingSFCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideRequiredSF" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideRequiredUT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideRequiredSF" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideRequiredUT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewingRequiredUT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewingRequiredSF" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FirstYearApplicableFractionSFPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FirstYearApplicableFractionUTPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreditAllocationUTPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalSquareFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryCompliance" Type="Boolean" />
+    <Property Name="SecondaryCompliance" Type="Boolean" />
+    <Property Name="PrimaryComplianceUnits" Type="Int32" />
+    <Property Name="PrimaryComplianceSquareFeet" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondaryComplianceUnits" Type="Int32" />
+    <Property Name="SecondaryComplianceSquareFeet" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="fkPrimarySetAside" Type="Int32" Nullable="false" />
+    <Property Name="fkSecondarySetAside" Type="Int32" />
+    <Property Name="DeepRentSkew" Type="Boolean" />
+    <Property Name="TaxCreditPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="fkMinimumIncomeLimit" Type="Int32" />
+    <Property Name="RentFloor" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcAGMIs" Relationship="Self.FK_AGMI_Building" FromRole="tcBuilding" ToRole="tcAGMI" />
+    <NavigationProperty Name="tcProperty" Relationship="Self.FK_Building_Property" FromRole="tcBuilding" ToRole="tcProperty" />
+    <NavigationProperty Name="tcMinimumIncomeLimit" Relationship="Self.FK_tcBuilding_tcMinimumIncomeLimits" FromRole="tcBuilding" ToRole="tcMinimumIncomeLimits" />
+    <NavigationProperty Name="tcMinimumSetAsideType" Relationship="Self.FK_tcBuilding_tcMinimumSetAsideType" FromRole="tcBuilding" ToRole="tcMinimumSetAsideType" />
+    <NavigationProperty Name="tcMinimumSetAsideType1" Relationship="Self.FK_tcBuilding_tcMinimumSetAsideType1" FromRole="tcBuilding" ToRole="tcMinimumSetAsideType" />
+    <NavigationProperty Name="tcUnits" Relationship="Self.FK_Unit_Building" FromRole="tcBuilding" ToRole="tcUnit" />
+  </EntityType>
+  <EntityType Name="tcComplianceEntity">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkComplianceEntityRelationship" Type="Int32" />
+    <Property Name="fkComplianceEntityType" Type="Int32" />
+    <Property Name="fkBuilding" Type="Int32" />
+    <Property Name="fkFamily" Type="Int32" />
+    <Property Name="AGMI40FamilyCount1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount7" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI40FamilyCount8" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount7" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI50FamilyCount8" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount7" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AGMI60FamilyCount8" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GrossIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GrossAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsFamilyEligible" Type="Boolean" />
+    <Property Name="PrimarySetAsideType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryUnitCount" Type="Int32" />
+    <Property Name="PrimaryFootageCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideRequiredUnitCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideRequiredFootageCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimaryFootagePCT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimaryUnitPCT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimaryApplicableFractionDroped" Type="Boolean" />
+    <Property Name="SecondarySetAsideType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SecondaryUnitCount" Type="Int32" />
+    <Property Name="SEcondaryFootageCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideRequiredUnitCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideRequiredFootageCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondaryUnitPCT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondaryFootagePCT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondaryApplicableFractionDroped" Type="Boolean" />
+    <Property Name="DeepRentSkewAFUnitCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewAFFootageCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSetAsideRequiredUnitCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSetAsideRequiredFootageCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalSquareFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreditAllocationAvaliableUT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreditAllocationUTPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NumberofEligibleMembers" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="AGMI140Percent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="isFamilyOverIncome" Type="Boolean" />
+    <Property Name="NeedAvailableUnitRule" Type="Boolean" />
+    <Property Name="AvailableMarketRentTics" Type="Boolean" />
+    <Property Name="StudentValidException" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CurrentIncomeLimitFamilySize" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IncomeRestrictionMet" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IncomeRestrictionPercentage" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TotalCashValueofAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAnnualIncomeofAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ImputedIncomefromAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MaximumRentLimit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MoveInDate" Type="DateTime" Precision="3" />
+    <Property Name="IsUnitTransfer" Type="Boolean" />
+    <Property Name="HouseholdSizeAtMoveIn" Type="Int32" />
+    <Property Name="IncomeLimitAtMoveIn" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="tcComplianceEntityType" Relationship="Self.FK_ComplianceEntity_ComplianceEntityType" FromRole="tcComplianceEntity" ToRole="tcComplianceEntityType" />
+    <NavigationProperty Name="tcComplianceRentRestrictionIncomeLimits" Relationship="Self.FK_tcComplianceRentRestrictionIncomeLimit_tcComplianceEntity" FromRole="tcComplianceEntity" ToRole="tcComplianceRentRestrictionIncomeLimit" />
+  </EntityType>
+  <EntityType Name="tcComplianceEntityRelationship">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComplianceEntityRelationship" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkComplianceEntity" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tcComplianceEntityType">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComplianceEntityType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="tcComplianceEntities" Relationship="Self.FK_ComplianceEntity_ComplianceEntityType" FromRole="tcComplianceEntityType" ToRole="tcComplianceEntity" />
+  </EntityType>
+  <EntityType Name="tcComplianceProgram">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComplianceProgram" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="tcComplianceRules" Relationship="Self.FK_ComplianceRule_ComplianceProgram" FromRole="tcComplianceProgram" ToRole="tcComplianceRule" />
+  </EntityType>
+  <EntityType Name="tcComplianceRentRestrictionIncomeLimit">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fktcComplianceEntity" Type="Int32" />
+    <Property Name="RentRestrictionPercent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IncomeLimit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="MaxRent" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="tcComplianceEntity" Relationship="Self.FK_tcComplianceRentRestrictionIncomeLimit_tcComplianceEntity" FromRole="tcComplianceRentRestrictionIncomeLimit" ToRole="tcComplianceEntity" />
+  </EntityType>
+  <EntityType Name="tcComplianceRule">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComplianceRule" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ComplianceRuleType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkComplianceProgram" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="tcComplianceProgram" Relationship="Self.FK_ComplianceRule_ComplianceProgram" FromRole="tcComplianceRule" ToRole="tcComplianceProgram" />
+    <NavigationProperty Name="tcComplianceRuleTargets" Relationship="Self.FK_ComplianceRuleTarget_ComplianceRule" FromRole="tcComplianceRule" ToRole="tcComplianceRuleTarget" />
+  </EntityType>
+  <EntityType Name="tcComplianceRuleTarget">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComplianceRuleTarget" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkComplianceRule" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="tcComplianceRule" Relationship="Self.FK_ComplianceRuleTarget_ComplianceRule" FromRole="tcComplianceRuleTarget" ToRole="tcComplianceRule" />
+  </EntityType>
+  <EntityType Name="tcDelinquentRentColumn">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkUnit" Type="Int32" />
+    <Property Name="DelinquentRent" Type="Decimal" Precision="18" Scale="6" />
+  </EntityType>
+  <EntityType Name="tcDTAlarm">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkFamily" Type="Int32" />
+    <Property Name="fkBuilding" Type="Int32" />
+    <Property Name="DateDetected" Type="DateTime" Precision="3" />
+    <Property Name="Info" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="FamilyExternalId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BuildingExternalId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tcDTAsset">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkFamilymember" Type="Int32" Nullable="false" />
+    <Property Name="AssetDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="WithdrawlPenalty" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AnnualIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tcDTFamilyMember" Relationship="Self.FK_tcDTAssets_tcDTFamilyMember" FromRole="tcDTAssets" ToRole="tcDTFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcDTBuilding">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BIN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BuildingDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fkProperty" Type="Int32" Nullable="false" />
+    <Property Name="PlacedInServiceDate" Type="DateTime" Precision="3" />
+    <Property Name="FirstYearApplicableFractionSFPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FirstYearApplicableFractionUTPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreditAllocationUTPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkPrimarySetAside" Type="Int32" Nullable="false" />
+    <Property Name="fkSecondarySetAside" Type="Int32" />
+    <Property Name="DeepRentSkew" Type="Boolean" />
+    <Property Name="TransactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TaxCreditPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="fkMinimumIncomeLimit" Type="Int32" />
+    <Property Name="RentFloor" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BuildingID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcDTMinimumIncomeLimit" Relationship="Self.FK_tcDTBuilding_tcDTMinimumIncomeLimits" FromRole="tcDTBuilding" ToRole="tcDTMinimumIncomeLimits" />
+    <NavigationProperty Name="tcDTMinimumSetAsideType" Relationship="Self.FK_tcDTBuilding_tcDTMinimumSetAsideType" FromRole="tcDTBuilding" ToRole="tcDTMinimumSetAsideType" />
+    <NavigationProperty Name="tcDTMinimumSetAsideType1" Relationship="Self.FK_tcDTBuilding_tcDTMinimumSetAsideType1" FromRole="tcDTBuilding" ToRole="tcDTMinimumSetAsideType" />
+    <NavigationProperty Name="tcDTProperty" Relationship="Self.FK_tcDTBuilding_tcDTProperty" FromRole="tcDTBuilding" ToRole="tcDTProperty" />
+    <NavigationProperty Name="tcDTUnits" Relationship="Self.FK_tcDTUnit_tcDTBuilding" FromRole="tcDTBuilding" ToRole="tcDTUnit" />
+  </EntityType>
+  <EntityType Name="tcDTBuildingComplianceReport">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BuildingExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BuildingDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UnitsInBuilding" Type="Int32" />
+    <Property Name="SquareFeetInBuilding" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UnitsOccupiedInBuilding" Type="Int32" />
+    <Property Name="SquareFeetOccupiedInBuilding" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAside" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrimaryFirstYearAFFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimaryFirstYearAFUnit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideUnit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimaryActualFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimaryActualUnit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimaryCompliance" Type="Boolean" Nullable="false" />
+    <Property Name="SecondarySetAside" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryFirstYearAFFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondaryFirstYearAFUnit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideUnit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondaryActualFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondaryActualUnit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondaryCompliance" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tcDTEligibility">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkFamily" Type="Int32" />
+    <Property Name="fkUnit" Type="Int32" />
+    <Property Name="fkPrimarySetAside" Type="Int32" />
+    <Property Name="fkSecondarySetAside" Type="Int32" />
+    <Property Name="IsFamilyEligible" Type="Boolean" />
+    <Property Name="DeepRentSkewing" Type="Boolean" />
+    <Property Name="MeetPrimarySetAsideAGMIRequirements" Type="Boolean" />
+    <Property Name="MeetSecondarySetAsideAGMIRequirements" Type="Boolean" />
+    <Property Name="MeetDeepRentSkewingAGMIRequirements" Type="Boolean" />
+    <Property Name="PrimarySetAsideMeetMinumumRentRequirements" Type="Boolean" />
+    <Property Name="SecondarySetAsideMeetMinumumRentRequirements" Type="Boolean" />
+    <Property Name="DeepRentSkewingMeetMinumumRentRequirements" Type="Boolean" />
+    <Property Name="PrimarySetAsideProjectedGrossRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideProjectedGrossRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewingProjectedGrossRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ProjectedUtilityAllowance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideProjectedNetRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideProjectedNetRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewingProjectedNetRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MeetRequiredBedroomSize" Type="Boolean" />
+    <Property Name="NeedPrimarySetAsideResidents" Type="Boolean" />
+    <Property Name="NeedSecondarySetAsideResidents" Type="Boolean" />
+    <Property Name="NeedDeepSkewingResidents" Type="Boolean" />
+    <Property Name="NeedCreditAllocationResidents" Type="Boolean" />
+    <Property Name="WillCountTowardsTaxCreditSetAside" Type="Boolean" />
+    <Property Name="FamilyMemberCount" Type="Int32" />
+    <Property Name="FamilyExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UnitExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TransactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IncomeAtMoveIn" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IncomeRestrictionPercentage" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TotalCashValueofAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAnnualIncomeofAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ImputedIncomefromAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CurrentIncomeLimitFamilySize" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IncomeRestrictionMet" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="IncomeExcedes140pct" Type="Boolean" />
+    <Property Name="StudentValidException" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="FamilyCountAtMoveIn" Type="Int32" />
+    <Property Name="MaximumRentLimit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MoveInDate" Type="DateTime" Precision="3" />
+    <Property Name="IncomeLimitAtMoveIn" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="tcDTRentRestrictionIncomeLimits" Relationship="Self.FK_tcDTRentRestrictionIncomeLimit_tcDTEligibility" FromRole="tcDTEligibility" ToRole="tcDTRentRestrictionIncomeLimit" />
+  </EntityType>
+  <EntityType Name="tcDTFamily">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsFullTimeResidentialWorker" Type="Boolean" />
+    <Property Name="TransactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tcDTFamilyMembers" Relationship="Self.FK_tcDTFamilyMember_tcDTFamily" FromRole="tcDTFamily" ToRole="tcDTFamilyMember" />
+    <NavigationProperty Name="tcDTTICs" Relationship="Self.FK_tcDTTIC_tcDTFamily" FromRole="tcDTFamily" ToRole="tcDTTIC" />
+  </EntityType>
+  <EntityType Name="tcDTFamilyMember">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkFamily" Type="Int32" Nullable="false" />
+    <Property Name="fkFamilyMemberStatus" Type="Int32" Nullable="false" />
+    <Property Name="fkStudentStatus" Type="Int32" Nullable="false" />
+    <Property Name="fkSpecialStatus" Type="Int32" />
+    <Property Name="SSN" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleInitial" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tcDTAssets" Relationship="Self.FK_tcDTAssets_tcDTFamilyMember" FromRole="tcDTFamilyMember" ToRole="tcDTAssets" />
+    <NavigationProperty Name="tcDTFamily" Relationship="Self.FK_tcDTFamilyMember_tcDTFamily" FromRole="tcDTFamilyMember" ToRole="tcDTFamily" />
+    <NavigationProperty Name="tcDTFamilyMemberStatu" Relationship="Self.FK_tcDTFamilyMember_tcDTFamilyMemberStatus" FromRole="tcDTFamilyMember" ToRole="tcDTFamilyMemberStatus" />
+    <NavigationProperty Name="tcDTSpecialStatu" Relationship="Self.FK_tcDTFamilyMember_tcDTSpecialStatus" FromRole="tcDTFamilyMember" ToRole="tcDTSpecialStatus" />
+    <NavigationProperty Name="tcDTStudentStatu" Relationship="Self.FK_tcDTFamilyMember_tcDTStudentStatus" FromRole="tcDTFamilyMember" ToRole="tcDTStudentStatus" />
+    <NavigationProperty Name="tcDTIncomes" Relationship="Self.FK_tcDTIncome_tcDTFamilyMember" FromRole="tcDTFamilyMember" ToRole="tcDTIncome" />
+  </EntityType>
+  <EntityType Name="tcDTFamilyMemberStatu">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyMemberStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tcDTFamilyMembers" Relationship="Self.FK_tcDTFamilyMember_tcDTFamilyMemberStatus" FromRole="tcDTFamilyMemberStatus" ToRole="tcDTFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcDTIncome">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearlyIncomeAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="fkIncomeType" Type="Int32" />
+    <Property Name="fkFamilyMember" Type="Int32" />
+    <Property Name="IncomeDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tcDTFamilyMember" Relationship="Self.FK_tcDTIncome_tcDTFamilyMember" FromRole="tcDTIncome" ToRole="tcDTFamilyMember" />
+    <NavigationProperty Name="tcDTIncomeType" Relationship="Self.FK_tcDTIncome_tcDTIncomeType" FromRole="tcDTIncome" ToRole="tcDTIncomeType" />
+  </EntityType>
+  <EntityType Name="tcDTIncomeType">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IncomeType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExternalPK" Type="Int32" />
+    <NavigationProperty Name="tcDTIncomes" Relationship="Self.FK_tcDTIncome_tcDTIncomeType" FromRole="tcDTIncomeType" ToRole="tcDTIncome" />
+  </EntityType>
+  <EntityType Name="tcDTMedianIncome">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MedianIncome1Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome2Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome3Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome4Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome5Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome6Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome7Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome8Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkProperty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tcDTProperty" Relationship="Self.FK_tcDTMedianIncome_tcDTProperty" FromRole="tcDTMedianIncome" ToRole="tcDTProperty" />
+  </EntityType>
+  <EntityType Name="tcDTMinimumIncomeLimit">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MinimumIncomeFormula" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MinimumIncomeFormulaCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tcDTBuildings" Relationship="Self.FK_tcDTBuilding_tcDTMinimumIncomeLimits" FromRole="tcDTMinimumIncomeLimits" ToRole="tcDTBuilding" />
+  </EntityType>
+  <EntityType Name="tcDTMinimumSetAsideType">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MinimumSetAsideType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MinimumSetAsideTypeCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tcDTBuildings" Relationship="Self.FK_tcDTBuilding_tcDTMinimumSetAsideType" FromRole="tcDTMinimumSetAsideType" ToRole="tcDTBuilding" />
+    <NavigationProperty Name="tcDTBuildings1" Relationship="Self.FK_tcDTBuilding_tcDTMinimumSetAsideType1" FromRole="tcDTMinimumSetAsideType" ToRole="tcDTBuilding" />
+  </EntityType>
+  <EntityType Name="tcDTProperty">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PropertyID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcDTBuildings" Relationship="Self.FK_tcDTBuilding_tcDTProperty" FromRole="tcDTProperty" ToRole="tcDTBuilding" />
+    <NavigationProperty Name="tcDTMedianIncomes" Relationship="Self.FK_tcDTMedianIncome_tcDTProperty" FromRole="tcDTProperty" ToRole="tcDTMedianIncome" />
+  </EntityType>
+  <EntityType Name="tcDTPropertyComplianceReport">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfBuilding" Type="Int32" />
+    <Property Name="ComplianceIn2050" Type="Int32" />
+    <Property Name="NonComplianceIn2050" Type="Int32" />
+    <Property Name="ComplianceIn4060" Type="Int32" />
+    <Property Name="NonComplianceIn4060" Type="Int32" />
+    <Property Name="ComplianceIn2560" Type="Int32" />
+    <Property Name="NonComplianceIn2560" Type="Int32" />
+    <Property Name="PropertyExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tcDTRentRestrictionIncomeLimit">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fktcDTEligibility" Type="Int32" />
+    <Property Name="tcTIC" Type="Int32" />
+    <Property Name="RentRestrictionPercent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IncomeLimit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="MaxRent" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="tcDTEligibility" Relationship="Self.FK_tcDTRentRestrictionIncomeLimit_tcDTEligibility" FromRole="tcDTRentRestrictionIncomeLimit" ToRole="tcDTEligibility" />
+    <NavigationProperty Name="tcTIC1" Relationship="Self.FK_tcDTRentRestrictionIncomeLimit_tcTIC" FromRole="tcDTRentRestrictionIncomeLimit" ToRole="tcTIC" />
+  </EntityType>
+  <EntityType Name="tcDTSpecialStatu">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SpecialStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tcDTFamilyMembers" Relationship="Self.FK_tcDTFamilyMember_tcDTSpecialStatus" FromRole="tcDTSpecialStatus" ToRole="tcDTFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcDTStudentStatu">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tcDTFamilyMembers" Relationship="Self.FK_tcDTFamilyMember_tcDTStudentStatus" FromRole="tcDTStudentStatus" ToRole="tcDTFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcDTTIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="NextRecertificationDate" Type="DateTime" Precision="3" />
+    <Property Name="FiledDate" Type="DateTime" Precision="3" />
+    <Property Name="ApplicationDate" Type="DateTime" Precision="3" />
+    <Property Name="ValidationDate" Type="DateTime" Precision="3" />
+    <Property Name="fkFamily" Type="Int32" />
+    <Property Name="fkTransactionType" Type="Int32" />
+    <Property Name="DeepRentSkewing" Type="Boolean" />
+    <Property Name="FamilyCountAtMoveIn" Type="Int32" />
+    <Property Name="GrossAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GrossIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GrossRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MaximumRentLimit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OtherNonOptionalCharges" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OutstandingBalance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RentAssistance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TenantPaidRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalIncomeAtMoveIn" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UtilityAllowance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsSection8" Type="Boolean" />
+    <Property Name="NumberofEligibleMembers" Type="Int32" />
+    <Property Name="CountsForTaxCredit" Type="Boolean" />
+    <Property Name="IsMarketRent" Type="Boolean" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StudentValidException" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CurrentIncomeLimitFamilySize" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IncomeRestrictionMet" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentIncomeLimitBy140pct" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IncomeExcedes140pct" Type="Boolean" />
+    <NavigationProperty Name="tcDTFamily" Relationship="Self.FK_tcDTTIC_tcDTFamily" FromRole="tcDTTIC" ToRole="tcDTFamily" />
+    <NavigationProperty Name="tcDTTransactionType" Relationship="Self.FK_tcDTTIC_tcDTTransactionType" FromRole="tcDTTIC" ToRole="tcDTTransactionType" />
+  </EntityType>
+  <EntityType Name="tcDTTransactionType">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionTypeCode" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TransactionDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcDTTICs" Relationship="Self.FK_tcDTTIC_tcDTTransactionType" FromRole="tcDTTransactionType" ToRole="tcDTTIC" />
+  </EntityType>
+  <EntityType Name="tcDTUnit">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnitDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UnitNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkBuilding" Type="Int32" Nullable="false" />
+    <Property Name="RoomCount" Type="Int32" Nullable="false" />
+    <Property Name="SquareFeet" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsStaffUnit" Type="Boolean" />
+    <Property Name="TransactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UtilityAllowance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UnitID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RentRestrictionPercent" Type="Int32" />
+    <NavigationProperty Name="tcDTBuilding" Relationship="Self.FK_tcDTUnit_tcDTBuilding" FromRole="tcDTUnit" ToRole="tcDTBuilding" />
+  </EntityType>
+  <EntityType Name="tcEliteKeyMap">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkUniqueKey" Type="Int32" Nullable="false" />
+    <Property Name="EliteKeyValue" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcUniqueKeyMap" Relationship="Self.FK_tcEliteKeyMap_tcUniqueKeyMap" FromRole="tcEliteKeyMap" ToRole="tcUniqueKeyMap" />
+  </EntityType>
+  <EntityType Name="tcFamily">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsFamilyEligible" Type="Boolean" />
+    <Property Name="NextRecertificationDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsFullTimeResidentialWorker" Type="Boolean" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EffectiveDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="tcFamilyMembers" Relationship="Self.FK_FamilyMember_Family" FromRole="tcFamily" ToRole="tcFamilyMember" />
+    <NavigationProperty Name="tcHistoricalOccupancies" Relationship="Self.FK_tcHistoricalOccupancies_tcFamily" FromRole="tcFamily" ToRole="tcHistoricalOccupancies" />
+    <NavigationProperty Name="tcOccupancies" Relationship="Self.FK_tcOccupancy_tcFamily" FromRole="tcFamily" ToRole="tcOccupancy" />
+    <NavigationProperty Name="tcTICs" Relationship="Self.FK_tcTIC_tcFamily" FromRole="tcFamily" ToRole="tcTIC" />
+  </EntityType>
+  <EntityType Name="tcFamilyMember">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkFamily" Type="Int32" Nullable="false" />
+    <Property Name="fkFamilyMemberStatus" Type="Int32" Nullable="false" />
+    <Property Name="fkStudentStatus" Type="Int32" Nullable="false" />
+    <Property Name="fkSpecialStatus" Type="Int32" />
+    <Property Name="SSN" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleInitial" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="fkGender" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MemberNumber" Type="Int32" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcAssets" Relationship="Self.FK_Assets_FamilyMember" FromRole="tcFamilyMember" ToRole="tcAssets" />
+    <NavigationProperty Name="tcFamily" Relationship="Self.FK_FamilyMember_Family" FromRole="tcFamilyMember" ToRole="tcFamily" />
+    <NavigationProperty Name="tcFamilyMemberStatu" Relationship="Self.FK_FamilyMember_FamilyMemberStatus" FromRole="tcFamilyMember" ToRole="tcFamilyMemberStatus" />
+    <NavigationProperty Name="tcSpecialStatu" Relationship="Self.FK_FamilyMember_SpecialStatus" FromRole="tcFamilyMember" ToRole="tcSpecialStatus" />
+    <NavigationProperty Name="tcStudentStatu" Relationship="Self.FK_FamilyMember_StudentStatus" FromRole="tcFamilyMember" ToRole="tcStudentStatus" />
+    <NavigationProperty Name="tcIncomes" Relationship="Self.FK_Income_FamilyMember" FromRole="tcFamilyMember" ToRole="tcIncome" />
+    <NavigationProperty Name="tcGender" Relationship="Self.FK_tcFamilyMember_tcGender" FromRole="tcFamilyMember" ToRole="tcGender" />
+  </EntityType>
+  <EntityType Name="tcFamilyMemberStatu">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyMemberStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcFamilyMembers" Relationship="Self.FK_FamilyMember_FamilyMemberStatus" FromRole="tcFamilyMemberStatus" ToRole="tcFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcGender">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcFamilyMembers" Relationship="Self.FK_tcFamilyMember_tcGender" FromRole="tcGender" ToRole="tcFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcHistoricalOccupancy">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkFamily" Type="Int32" Nullable="false" />
+    <Property Name="fkUnit" Type="Int32" Nullable="false" />
+    <Property Name="MovInDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcFamily" Relationship="Self.FK_tcHistoricalOccupancies_tcFamily" FromRole="tcHistoricalOccupancies" ToRole="tcFamily" />
+    <NavigationProperty Name="tcUnit" Relationship="Self.FK_tcHistoricalOccupancies_tcUnit" FromRole="tcHistoricalOccupancies" ToRole="tcUnit" />
+  </EntityType>
+  <EntityType Name="tcIncome">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearlyIncomeAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="fkIncomeType" Type="Int32" />
+    <Property Name="fkFamilyMember" Type="Int32" />
+    <Property Name="IncomeDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcFamilyMember" Relationship="Self.FK_Income_FamilyMember" FromRole="tcIncome" ToRole="tcFamilyMember" />
+    <NavigationProperty Name="tcIncomeType" Relationship="Self.FK_Income_IncomeType" FromRole="tcIncome" ToRole="tcIncomeType" />
+  </EntityType>
+  <EntityType Name="tcIncomeType">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IncomeType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExternalPK" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcIncomes" Relationship="Self.FK_Income_IncomeType" FromRole="tcIncomeType" ToRole="tcIncome" />
+  </EntityType>
+  <EntityType Name="tcMedianIncome">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MedianIncome1Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome2Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome3Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome4Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome5Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome6Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome7Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MedianIncome8Person" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="fkProperty" Type="Int32" Nullable="false" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcProperty" Relationship="Self.FK_tcMedianIncome_tcProperty" FromRole="tcMedianIncome" ToRole="tcProperty" />
+  </EntityType>
+  <EntityType Name="tcMinimumIncomeLimit">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MinimumIncomeFormula" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MinimumIncomeFormulaCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcBuildings" Relationship="Self.FK_tcBuilding_tcMinimumIncomeLimits" FromRole="tcMinimumIncomeLimits" ToRole="tcBuilding" />
+  </EntityType>
+  <EntityType Name="tcMinimumSetAsideType">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MinimumSetAsideType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MinimumSetAsideTypeCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcBuildings" Relationship="Self.FK_tcBuilding_tcMinimumSetAsideType" FromRole="tcMinimumSetAsideType" ToRole="tcBuilding" />
+    <NavigationProperty Name="tcBuildings1" Relationship="Self.FK_tcBuilding_tcMinimumSetAsideType1" FromRole="tcMinimumSetAsideType" ToRole="tcBuilding" />
+    <NavigationProperty Name="tcOccupancies" Relationship="Self.FK_Occupancy_Family" FromRole="tcMinimumSetAsideType" ToRole="tcOccupancy" />
+  </EntityType>
+  <EntityType Name="tcMoveInTemp">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkFamily" Type="Int32" />
+    <Property Name="fkUnit" Type="Int32" />
+    <Property Name="fkPrimarySetAside" Type="Int32" />
+    <Property Name="fkSecondarySetAside" Type="Int32" />
+    <Property Name="DeepRentSkewing" Type="Boolean" />
+    <Property Name="MeetPrimarySetAsideAGMIRequirements" Type="Boolean" />
+    <Property Name="MeetSecondarySetAsideAGMIRequirements" Type="Boolean" />
+    <Property Name="MeetDeepRentSkewingAGMIRequirements" Type="Boolean" />
+    <Property Name="PrimarySetAsideMeetMinumumRentRequirements" Type="Boolean" />
+    <Property Name="SecondarySetAsideMeetMinumumRentRequirements" Type="Boolean" />
+    <Property Name="DeepRentSkewingMeetMinumumRentRequirements" Type="Boolean" />
+    <Property Name="PrimarySetAsideProjectedGrossRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideProjectedGrossRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewingProjectedGrossRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ProjectedUtilityAllowance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrimarySetAsideProjectedNetRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SecondarySetAsideProjectedNetRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeepRentSkewingProjectedNetRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MeetRequiredBedroomSize" Type="Boolean" />
+    <Property Name="NeedPrimarySetAsideResidents" Type="Boolean" />
+    <Property Name="NeedSecondarySetAsideResidents" Type="Boolean" />
+    <Property Name="NeedDeepSkewingResidents" Type="Boolean" />
+    <Property Name="NeedCreditAllocationResidents" Type="Boolean" />
+    <Property Name="WillCountTowardsTaxCreditSetAside" Type="Boolean" />
+    <Property Name="FamilyMemberCount" Type="Int32" />
+    <Property Name="IsMoveInFamilyEligible" Type="Boolean" />
+    <Property Name="IncomeRestrictionPercentage" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="IsEligibilityCall" Type="Boolean" />
+    <Property Name="fkTransactionType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tcOccupancy">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkUnit" Type="Int32" Nullable="false" />
+    <Property Name="fkFamily" Type="Int32" Nullable="false" />
+    <Property Name="OccupancyStartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OccupancyEndDate" Type="DateTime" Precision="3" />
+    <Property Name="MaintainApplicableFractionRule" Type="Boolean" />
+    <Property Name="VacantUnitRule" Type="Boolean" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsFiled" Type="Boolean" />
+    <Property Name="AvailableUnitRule" Type="Boolean" />
+    <Property Name="RemoveAlertRule" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="fkMinSetAsideType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tcFamily" Relationship="Self.FK_tcOccupancy_tcFamily" FromRole="tcOccupancy" ToRole="tcFamily" />
+    <NavigationProperty Name="tcMinimumSetAsideType" Relationship="Self.FK_Occupancy_Family" FromRole="tcOccupancy" ToRole="tcMinimumSetAsideType" />
+    <NavigationProperty Name="tcUnit" Relationship="Self.FK_Occupancy_Unit" FromRole="tcOccupancy" ToRole="tcUnit" />
+  </EntityType>
+  <EntityType Name="tcProperty">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcBuildings" Relationship="Self.FK_Building_Property" FromRole="tcProperty" ToRole="tcBuilding" />
+    <NavigationProperty Name="tcMedianIncomes" Relationship="Self.FK_tcMedianIncome_tcProperty" FromRole="tcProperty" ToRole="tcMedianIncome" />
+    <NavigationProperty Name="tcRents" Relationship="Self.FK_Rent_Property" FromRole="tcProperty" ToRole="tcRent" />
+  </EntityType>
+  <EntityType Name="tcRent">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RentAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SquareFootage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="fkUnitSize" Type="Int32" Nullable="false" />
+    <Property Name="UtilityAllowance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="fkProperty" Type="Int32" Nullable="false" />
+    <Property Name="MinimumRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcProperty" Relationship="Self.FK_Rent_Property" FromRole="tcRent" ToRole="tcProperty" />
+    <NavigationProperty Name="tcUnitSize" Relationship="Self.FK_Rent_UnitSize" FromRole="tcRent" ToRole="tcUnitSize" />
+  </EntityType>
+  <EntityType Name="tcRole">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tcUsersRoles" Relationship="Self.FK_UsersRoles_Roles" FromRole="tcRoles" ToRole="tcUsersRoles" />
+  </EntityType>
+  <EntityType Name="tcSetting">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HUDPassbookRate" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="LastSuccessfulMATTransmission" Type="DateTime" Precision="3" />
+    <Property Name="NextScheduledMATTransmission" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tcSpecialStatu">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SpecialStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SpecialStatusCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcFamilyMembers" Relationship="Self.FK_FamilyMember_SpecialStatus" FromRole="tcSpecialStatus" ToRole="tcFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcStudentStatu">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcFamilyMembers" Relationship="Self.FK_FamilyMember_StudentStatus" FromRole="tcStudentStatus" ToRole="tcFamilyMember" />
+  </EntityType>
+  <EntityType Name="tcTIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="NextRecertificationDate" Type="DateTime" Precision="3" />
+    <Property Name="FiledDate" Type="DateTime" Precision="3" />
+    <Property Name="ApplicationDate" Type="DateTime" Precision="3" />
+    <Property Name="ValidationDate" Type="DateTime" Precision="3" />
+    <Property Name="fkFamily" Type="Int32" />
+    <Property Name="fkTransactionType" Type="Int32" />
+    <Property Name="fkWorkingTIC" Type="Int32" />
+    <Property Name="IsFiled" Type="Boolean" />
+    <Property Name="DeepRentSkewing" Type="Boolean" />
+    <Property Name="FamilyCountAtMoveIn" Type="Int32" />
+    <Property Name="GrossAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GrossIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GrossRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MaximumRentLimit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OtherNonOptionalCharges" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OutstandingBalance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RentAssistance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TenantPaidRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalIncomeAtMoveIn" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UtilityAllowance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsSection8" Type="Boolean" />
+    <Property Name="NumberofEligibleMembers" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CountsForTaxCredit" Type="Boolean" />
+    <Property Name="IsMarketRent" Type="Boolean" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StudentValidException" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CurrentIncomeLimitFamilySize" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IncomeRestrictionMet" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentIncomeLimitBy140pct" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IncomeExcedes140pct" Type="Boolean" />
+    <Property Name="IncomeRestrictionPercentage" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TotalCashValueofAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAnnualIncomeofAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ImputedIncomefromAssets" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MoveInDate" Type="DateTime" Precision="3" />
+    <Property Name="IncomeLimitAtMoveIn" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="tcDTRentRestrictionIncomeLimits" Relationship="Self.FK_tcDTRentRestrictionIncomeLimit_tcTIC" FromRole="tcTIC" ToRole="tcDTRentRestrictionIncomeLimit" />
+    <NavigationProperty Name="tcFamily" Relationship="Self.FK_tcTIC_tcFamily" FromRole="tcTIC" ToRole="tcFamily" />
+    <NavigationProperty Name="tcTransactionType" Relationship="Self.FK_tcTIC_tcTransactionType" FromRole="tcTIC" ToRole="tcTransactionType" />
+  </EntityType>
+  <EntityType Name="tcTransactionType">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionTypeCode" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TransactionDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tcTICs" Relationship="Self.FK_tcTIC_tcTransactionType" FromRole="tcTransactionType" ToRole="tcTIC" />
+  </EntityType>
+  <EntityType Name="tcUniqueKeyMap">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UniqueKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PBUType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcEliteKeyMaps" Relationship="Self.FK_tcEliteKeyMap_tcUniqueKeyMap" FromRole="tcUniqueKeyMap" ToRole="tcEliteKeyMap" />
+  </EntityType>
+  <EntityType Name="tcUnit">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnitDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UnitNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkBuilding" Type="Int32" />
+    <Property Name="fkUnitSize" Type="Int32" />
+    <Property Name="SquareFeet" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsOccupied" Type="Boolean" />
+    <Property Name="RentAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UtilityAllowance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MinimumRent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ExternalKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsStaffUnit" Type="Boolean" />
+    <Property Name="transactionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcBuilding" Relationship="Self.FK_Unit_Building" FromRole="tcUnit" ToRole="tcBuilding" />
+    <NavigationProperty Name="tcHistoricalOccupancies" Relationship="Self.FK_tcHistoricalOccupancies_tcUnit" FromRole="tcUnit" ToRole="tcHistoricalOccupancies" />
+    <NavigationProperty Name="tcOccupancies" Relationship="Self.FK_Occupancy_Unit" FromRole="tcUnit" ToRole="tcOccupancy" />
+    <NavigationProperty Name="tcUnitSize" Relationship="Self.FK_Unit_UnitSize" FromRole="tcUnit" ToRole="tcUnitSize" />
+  </EntityType>
+  <EntityType Name="tcUnitSize">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnitSize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BedroomCount" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tcRents" Relationship="Self.FK_Rent_UnitSize" FromRole="tcUnitSize" ToRole="tcRent" />
+    <NavigationProperty Name="tcUnits" Relationship="Self.FK_Unit_UnitSize" FromRole="tcUnitSize" ToRole="tcUnit" />
+  </EntityType>
+  <EntityType Name="tcUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tcUsersRoles" Relationship="Self.FK_UsersRoles_Users" FromRole="tcUsers" ToRole="tcUsersRoles" />
+  </EntityType>
+  <EntityType Name="tcUsersRole">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkUserID" Type="Int32" Nullable="false" />
+    <Property Name="fkRoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tcRole" Relationship="Self.FK_UsersRoles_Roles" FromRole="tcUsersRoles" ToRole="tcRoles" />
+    <NavigationProperty Name="tcUser" Relationship="Self.FK_UsersRoles_Users" FromRole="tcUsersRoles" ToRole="tcUsers" />
+  </EntityType>
+  <EntityType Name="tcRentRestrictionPercent">
+    <Key>
+      <PropertyRef Name="RentRestrictionPercent" />
+      <PropertyRef Name="isActive" />
+    </Key>
+    <Property Name="RentRestrictionPercent" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="isActive" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AGMI_Building">
+    <End Role="tcBuilding" Type="Self.tcBuilding" Multiplicity="1" />
+    <End Role="tcAGMI" Type="Self.tcAGMI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcBuilding">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcAGMI">
+        <PropertyRef Name="fkBuilding" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assets_FamilyMember">
+    <End Role="tcFamilyMember" Type="Self.tcFamilyMember" Multiplicity="1" />
+    <End Role="tcAssets" Type="Self.tcAsset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcFamilyMember">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcAssets">
+        <PropertyRef Name="fkFamilymember" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Building_Property">
+    <End Role="tcProperty" Type="Self.tcProperty" Multiplicity="1" />
+    <End Role="tcBuilding" Type="Self.tcBuilding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcProperty">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcBuilding">
+        <PropertyRef Name="fkProperty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcBuilding_tcMinimumIncomeLimits">
+    <End Role="tcMinimumIncomeLimits" Type="Self.tcMinimumIncomeLimit" Multiplicity="0..1" />
+    <End Role="tcBuilding" Type="Self.tcBuilding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcMinimumIncomeLimits">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcBuilding">
+        <PropertyRef Name="fkMinimumIncomeLimit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcBuilding_tcMinimumSetAsideType">
+    <End Role="tcMinimumSetAsideType" Type="Self.tcMinimumSetAsideType" Multiplicity="1" />
+    <End Role="tcBuilding" Type="Self.tcBuilding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcMinimumSetAsideType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcBuilding">
+        <PropertyRef Name="fkPrimarySetAside" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcBuilding_tcMinimumSetAsideType1">
+    <End Role="tcMinimumSetAsideType" Type="Self.tcMinimumSetAsideType" Multiplicity="0..1" />
+    <End Role="tcBuilding" Type="Self.tcBuilding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcMinimumSetAsideType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcBuilding">
+        <PropertyRef Name="fkSecondarySetAside" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Unit_Building">
+    <End Role="tcBuilding" Type="Self.tcBuilding" Multiplicity="0..1" />
+    <End Role="tcUnit" Type="Self.tcUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcBuilding">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcUnit">
+        <PropertyRef Name="fkBuilding" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComplianceEntity_ComplianceEntityType">
+    <End Role="tcComplianceEntityType" Type="Self.tcComplianceEntityType" Multiplicity="0..1" />
+    <End Role="tcComplianceEntity" Type="Self.tcComplianceEntity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcComplianceEntityType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcComplianceEntity">
+        <PropertyRef Name="fkComplianceEntityType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcComplianceRentRestrictionIncomeLimit_tcComplianceEntity">
+    <End Role="tcComplianceEntity" Type="Self.tcComplianceEntity" Multiplicity="0..1" />
+    <End Role="tcComplianceRentRestrictionIncomeLimit" Type="Self.tcComplianceRentRestrictionIncomeLimit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcComplianceEntity">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcComplianceRentRestrictionIncomeLimit">
+        <PropertyRef Name="fktcComplianceEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComplianceRule_ComplianceProgram">
+    <End Role="tcComplianceProgram" Type="Self.tcComplianceProgram" Multiplicity="0..1" />
+    <End Role="tcComplianceRule" Type="Self.tcComplianceRule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcComplianceProgram">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcComplianceRule">
+        <PropertyRef Name="fkComplianceProgram" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComplianceRuleTarget_ComplianceRule">
+    <End Role="tcComplianceRule" Type="Self.tcComplianceRule" Multiplicity="0..1" />
+    <End Role="tcComplianceRuleTarget" Type="Self.tcComplianceRuleTarget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcComplianceRule">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcComplianceRuleTarget">
+        <PropertyRef Name="fkComplianceRule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTAssets_tcDTFamilyMember">
+    <End Role="tcDTFamilyMember" Type="Self.tcDTFamilyMember" Multiplicity="1" />
+    <End Role="tcDTAssets" Type="Self.tcDTAsset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTFamilyMember">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTAssets">
+        <PropertyRef Name="fkFamilymember" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTBuilding_tcDTMinimumIncomeLimits">
+    <End Role="tcDTMinimumIncomeLimits" Type="Self.tcDTMinimumIncomeLimit" Multiplicity="0..1" />
+    <End Role="tcDTBuilding" Type="Self.tcDTBuilding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTMinimumIncomeLimits">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTBuilding">
+        <PropertyRef Name="fkMinimumIncomeLimit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTBuilding_tcDTMinimumSetAsideType">
+    <End Role="tcDTMinimumSetAsideType" Type="Self.tcDTMinimumSetAsideType" Multiplicity="1" />
+    <End Role="tcDTBuilding" Type="Self.tcDTBuilding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTMinimumSetAsideType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTBuilding">
+        <PropertyRef Name="fkPrimarySetAside" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTBuilding_tcDTMinimumSetAsideType1">
+    <End Role="tcDTMinimumSetAsideType" Type="Self.tcDTMinimumSetAsideType" Multiplicity="0..1" />
+    <End Role="tcDTBuilding" Type="Self.tcDTBuilding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTMinimumSetAsideType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTBuilding">
+        <PropertyRef Name="fkSecondarySetAside" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTBuilding_tcDTProperty">
+    <End Role="tcDTProperty" Type="Self.tcDTProperty" Multiplicity="1" />
+    <End Role="tcDTBuilding" Type="Self.tcDTBuilding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTProperty">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTBuilding">
+        <PropertyRef Name="fkProperty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTUnit_tcDTBuilding">
+    <End Role="tcDTBuilding" Type="Self.tcDTBuilding" Multiplicity="1" />
+    <End Role="tcDTUnit" Type="Self.tcDTUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTBuilding">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTUnit">
+        <PropertyRef Name="fkBuilding" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTRentRestrictionIncomeLimit_tcDTEligibility">
+    <End Role="tcDTEligibility" Type="Self.tcDTEligibility" Multiplicity="0..1" />
+    <End Role="tcDTRentRestrictionIncomeLimit" Type="Self.tcDTRentRestrictionIncomeLimit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTEligibility">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTRentRestrictionIncomeLimit">
+        <PropertyRef Name="fktcDTEligibility" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTFamilyMember_tcDTFamily">
+    <End Role="tcDTFamily" Type="Self.tcDTFamily" Multiplicity="1" />
+    <End Role="tcDTFamilyMember" Type="Self.tcDTFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTFamily">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTFamilyMember">
+        <PropertyRef Name="fkFamily" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTTIC_tcDTFamily">
+    <End Role="tcDTFamily" Type="Self.tcDTFamily" Multiplicity="0..1" />
+    <End Role="tcDTTIC" Type="Self.tcDTTIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTFamily">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTTIC">
+        <PropertyRef Name="fkFamily" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTFamilyMember_tcDTFamilyMemberStatus">
+    <End Role="tcDTFamilyMemberStatus" Type="Self.tcDTFamilyMemberStatu" Multiplicity="1" />
+    <End Role="tcDTFamilyMember" Type="Self.tcDTFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTFamilyMemberStatus">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTFamilyMember">
+        <PropertyRef Name="fkFamilyMemberStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTFamilyMember_tcDTSpecialStatus">
+    <End Role="tcDTSpecialStatus" Type="Self.tcDTSpecialStatu" Multiplicity="0..1" />
+    <End Role="tcDTFamilyMember" Type="Self.tcDTFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTSpecialStatus">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTFamilyMember">
+        <PropertyRef Name="fkSpecialStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTFamilyMember_tcDTStudentStatus">
+    <End Role="tcDTStudentStatus" Type="Self.tcDTStudentStatu" Multiplicity="1" />
+    <End Role="tcDTFamilyMember" Type="Self.tcDTFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTStudentStatus">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTFamilyMember">
+        <PropertyRef Name="fkStudentStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTIncome_tcDTFamilyMember">
+    <End Role="tcDTFamilyMember" Type="Self.tcDTFamilyMember" Multiplicity="0..1" />
+    <End Role="tcDTIncome" Type="Self.tcDTIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTFamilyMember">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTIncome">
+        <PropertyRef Name="fkFamilyMember" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTIncome_tcDTIncomeType">
+    <End Role="tcDTIncomeType" Type="Self.tcDTIncomeType" Multiplicity="0..1" />
+    <End Role="tcDTIncome" Type="Self.tcDTIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTIncomeType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTIncome">
+        <PropertyRef Name="fkIncomeType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTMedianIncome_tcDTProperty">
+    <End Role="tcDTProperty" Type="Self.tcDTProperty" Multiplicity="1" />
+    <End Role="tcDTMedianIncome" Type="Self.tcDTMedianIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTProperty">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTMedianIncome">
+        <PropertyRef Name="fkProperty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTRentRestrictionIncomeLimit_tcTIC">
+    <End Role="tcTIC" Type="Self.tcTIC" Multiplicity="0..1" />
+    <End Role="tcDTRentRestrictionIncomeLimit" Type="Self.tcDTRentRestrictionIncomeLimit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcTIC">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTRentRestrictionIncomeLimit">
+        <PropertyRef Name="tcTIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcDTTIC_tcDTTransactionType">
+    <End Role="tcDTTransactionType" Type="Self.tcDTTransactionType" Multiplicity="0..1" />
+    <End Role="tcDTTIC" Type="Self.tcDTTIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcDTTransactionType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcDTTIC">
+        <PropertyRef Name="fkTransactionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcEliteKeyMap_tcUniqueKeyMap">
+    <End Role="tcUniqueKeyMap" Type="Self.tcUniqueKeyMap" Multiplicity="1" />
+    <End Role="tcEliteKeyMap" Type="Self.tcEliteKeyMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcUniqueKeyMap">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcEliteKeyMap">
+        <PropertyRef Name="fkUniqueKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FamilyMember_Family">
+    <End Role="tcFamily" Type="Self.tcFamily" Multiplicity="1" />
+    <End Role="tcFamilyMember" Type="Self.tcFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcFamily">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcFamilyMember">
+        <PropertyRef Name="fkFamily" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcHistoricalOccupancies_tcFamily">
+    <End Role="tcFamily" Type="Self.tcFamily" Multiplicity="1" />
+    <End Role="tcHistoricalOccupancies" Type="Self.tcHistoricalOccupancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcFamily">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcHistoricalOccupancies">
+        <PropertyRef Name="fkFamily" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcOccupancy_tcFamily">
+    <End Role="tcFamily" Type="Self.tcFamily" Multiplicity="1" />
+    <End Role="tcOccupancy" Type="Self.tcOccupancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcFamily">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcOccupancy">
+        <PropertyRef Name="fkFamily" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcTIC_tcFamily">
+    <End Role="tcFamily" Type="Self.tcFamily" Multiplicity="0..1" />
+    <End Role="tcTIC" Type="Self.tcTIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcFamily">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcTIC">
+        <PropertyRef Name="fkFamily" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FamilyMember_FamilyMemberStatus">
+    <End Role="tcFamilyMemberStatus" Type="Self.tcFamilyMemberStatu" Multiplicity="1" />
+    <End Role="tcFamilyMember" Type="Self.tcFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcFamilyMemberStatus">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcFamilyMember">
+        <PropertyRef Name="fkFamilyMemberStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FamilyMember_SpecialStatus">
+    <End Role="tcSpecialStatus" Type="Self.tcSpecialStatu" Multiplicity="0..1" />
+    <End Role="tcFamilyMember" Type="Self.tcFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcSpecialStatus">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcFamilyMember">
+        <PropertyRef Name="fkSpecialStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FamilyMember_StudentStatus">
+    <End Role="tcStudentStatus" Type="Self.tcStudentStatu" Multiplicity="1" />
+    <End Role="tcFamilyMember" Type="Self.tcFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcStudentStatus">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcFamilyMember">
+        <PropertyRef Name="fkStudentStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Income_FamilyMember">
+    <End Role="tcFamilyMember" Type="Self.tcFamilyMember" Multiplicity="0..1" />
+    <End Role="tcIncome" Type="Self.tcIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcFamilyMember">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcIncome">
+        <PropertyRef Name="fkFamilyMember" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcFamilyMember_tcGender">
+    <End Role="tcGender" Type="Self.tcGender" Multiplicity="0..1" />
+    <End Role="tcFamilyMember" Type="Self.tcFamilyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcGender">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcFamilyMember">
+        <PropertyRef Name="fkGender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcHistoricalOccupancies_tcUnit">
+    <End Role="tcUnit" Type="Self.tcUnit" Multiplicity="1" />
+    <End Role="tcHistoricalOccupancies" Type="Self.tcHistoricalOccupancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcUnit">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcHistoricalOccupancies">
+        <PropertyRef Name="fkFamily" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Income_IncomeType">
+    <End Role="tcIncomeType" Type="Self.tcIncomeType" Multiplicity="0..1" />
+    <End Role="tcIncome" Type="Self.tcIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcIncomeType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcIncome">
+        <PropertyRef Name="fkIncomeType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcMedianIncome_tcProperty">
+    <End Role="tcProperty" Type="Self.tcProperty" Multiplicity="1" />
+    <End Role="tcMedianIncome" Type="Self.tcMedianIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcProperty">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcMedianIncome">
+        <PropertyRef Name="fkProperty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Occupancy_Family">
+    <End Role="tcMinimumSetAsideType" Type="Self.tcMinimumSetAsideType" Multiplicity="1" />
+    <End Role="tcOccupancy" Type="Self.tcOccupancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcMinimumSetAsideType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcOccupancy">
+        <PropertyRef Name="fkMinSetAsideType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Occupancy_Unit">
+    <End Role="tcUnit" Type="Self.tcUnit" Multiplicity="1" />
+    <End Role="tcOccupancy" Type="Self.tcOccupancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcUnit">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcOccupancy">
+        <PropertyRef Name="fkUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rent_Property">
+    <End Role="tcProperty" Type="Self.tcProperty" Multiplicity="1" />
+    <End Role="tcRent" Type="Self.tcRent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcProperty">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcRent">
+        <PropertyRef Name="fkProperty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rent_UnitSize">
+    <End Role="tcUnitSize" Type="Self.tcUnitSize" Multiplicity="1" />
+    <End Role="tcRent" Type="Self.tcRent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcUnitSize">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcRent">
+        <PropertyRef Name="fkUnitSize" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsersRoles_Roles">
+    <End Role="tcRoles" Type="Self.tcRole" Multiplicity="1" />
+    <End Role="tcUsersRoles" Type="Self.tcUsersRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcRoles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="tcUsersRoles">
+        <PropertyRef Name="fkRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcTIC_tcTransactionType">
+    <End Role="tcTransactionType" Type="Self.tcTransactionType" Multiplicity="0..1" />
+    <End Role="tcTIC" Type="Self.tcTIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcTransactionType">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcTIC">
+        <PropertyRef Name="fkTransactionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Unit_UnitSize">
+    <End Role="tcUnitSize" Type="Self.tcUnitSize" Multiplicity="0..1" />
+    <End Role="tcUnit" Type="Self.tcUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcUnitSize">
+        <PropertyRef Name="PK" />
+      </Principal>
+      <Dependent Role="tcUnit">
+        <PropertyRef Name="fkUnitSize" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsersRoles_Users">
+    <End Role="tcUsers" Type="Self.tcUser" Multiplicity="1" />
+    <End Role="tcUsersRoles" Type="Self.tcUsersRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tcUsers">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="tcUsersRoles">
+        <PropertyRef Name="fkUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EliteTaxCreditEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tcAGMIs" EntityType="Self.tcAGMI" />
+    <EntitySet Name="tcAssets" EntityType="Self.tcAsset" />
+    <EntitySet Name="tcBuildings" EntityType="Self.tcBuilding" />
+    <EntitySet Name="tcComplianceEntities" EntityType="Self.tcComplianceEntity" />
+    <EntitySet Name="tcComplianceEntityRelationships" EntityType="Self.tcComplianceEntityRelationship" />
+    <EntitySet Name="tcComplianceEntityTypes" EntityType="Self.tcComplianceEntityType" />
+    <EntitySet Name="tcCompliancePrograms" EntityType="Self.tcComplianceProgram" />
+    <EntitySet Name="tcComplianceRentRestrictionIncomeLimits" EntityType="Self.tcComplianceRentRestrictionIncomeLimit" />
+    <EntitySet Name="tcComplianceRules" EntityType="Self.tcComplianceRule" />
+    <EntitySet Name="tcComplianceRuleTargets" EntityType="Self.tcComplianceRuleTarget" />
+    <EntitySet Name="tcDelinquentRentColumns" EntityType="Self.tcDelinquentRentColumn" />
+    <EntitySet Name="tcDTAlarms" EntityType="Self.tcDTAlarm" />
+    <EntitySet Name="tcDTAssets" EntityType="Self.tcDTAsset" />
+    <EntitySet Name="tcDTBuildings" EntityType="Self.tcDTBuilding" />
+    <EntitySet Name="tcDTBuildingComplianceReports" EntityType="Self.tcDTBuildingComplianceReport" />
+    <EntitySet Name="tcDTEligibilities" EntityType="Self.tcDTEligibility" />
+    <EntitySet Name="tcDTFamilies" EntityType="Self.tcDTFamily" />
+    <EntitySet Name="tcDTFamilyMembers" EntityType="Self.tcDTFamilyMember" />
+    <EntitySet Name="tcDTFamilyMemberStatus" EntityType="Self.tcDTFamilyMemberStatu" />
+    <EntitySet Name="tcDTIncomes" EntityType="Self.tcDTIncome" />
+    <EntitySet Name="tcDTIncomeTypes" EntityType="Self.tcDTIncomeType" />
+    <EntitySet Name="tcDTMedianIncomes" EntityType="Self.tcDTMedianIncome" />
+    <EntitySet Name="tcDTMinimumIncomeLimits" EntityType="Self.tcDTMinimumIncomeLimit" />
+    <EntitySet Name="tcDTMinimumSetAsideTypes" EntityType="Self.tcDTMinimumSetAsideType" />
+    <EntitySet Name="tcDTProperties" EntityType="Self.tcDTProperty" />
+    <EntitySet Name="tcDTPropertyComplianceReports" EntityType="Self.tcDTPropertyComplianceReport" />
+    <EntitySet Name="tcDTRentRestrictionIncomeLimits" EntityType="Self.tcDTRentRestrictionIncomeLimit" />
+    <EntitySet Name="tcDTSpecialStatus" EntityType="Self.tcDTSpecialStatu" />
+    <EntitySet Name="tcDTStudentStatus" EntityType="Self.tcDTStudentStatu" />
+    <EntitySet Name="tcDTTICs" EntityType="Self.tcDTTIC" />
+    <EntitySet Name="tcDTTransactionTypes" EntityType="Self.tcDTTransactionType" />
+    <EntitySet Name="tcDTUnits" EntityType="Self.tcDTUnit" />
+    <EntitySet Name="tcEliteKeyMaps" EntityType="Self.tcEliteKeyMap" />
+    <EntitySet Name="tcFamilies" EntityType="Self.tcFamily" />
+    <EntitySet Name="tcFamilyMembers" EntityType="Self.tcFamilyMember" />
+    <EntitySet Name="tcFamilyMemberStatus" EntityType="Self.tcFamilyMemberStatu" />
+    <EntitySet Name="tcGenders" EntityType="Self.tcGender" />
+    <EntitySet Name="tcHistoricalOccupancies" EntityType="Self.tcHistoricalOccupancy" />
+    <EntitySet Name="tcIncomes" EntityType="Self.tcIncome" />
+    <EntitySet Name="tcIncomeTypes" EntityType="Self.tcIncomeType" />
+    <EntitySet Name="tcMedianIncomes" EntityType="Self.tcMedianIncome" />
+    <EntitySet Name="tcMinimumIncomeLimits" EntityType="Self.tcMinimumIncomeLimit" />
+    <EntitySet Name="tcMinimumSetAsideTypes" EntityType="Self.tcMinimumSetAsideType" />
+    <EntitySet Name="tcMoveInTemps" EntityType="Self.tcMoveInTemp" />
+    <EntitySet Name="tcOccupancies" EntityType="Self.tcOccupancy" />
+    <EntitySet Name="tcProperties" EntityType="Self.tcProperty" />
+    <EntitySet Name="tcRents" EntityType="Self.tcRent" />
+    <EntitySet Name="tcRoles" EntityType="Self.tcRole" />
+    <EntitySet Name="tcSettings" EntityType="Self.tcSetting" />
+    <EntitySet Name="tcSpecialStatus" EntityType="Self.tcSpecialStatu" />
+    <EntitySet Name="tcStudentStatus" EntityType="Self.tcStudentStatu" />
+    <EntitySet Name="tcTICs" EntityType="Self.tcTIC" />
+    <EntitySet Name="tcTransactionTypes" EntityType="Self.tcTransactionType" />
+    <EntitySet Name="tcUniqueKeyMaps" EntityType="Self.tcUniqueKeyMap" />
+    <EntitySet Name="tcUnits" EntityType="Self.tcUnit" />
+    <EntitySet Name="tcUnitSizes" EntityType="Self.tcUnitSize" />
+    <EntitySet Name="tcUsers" EntityType="Self.tcUser" />
+    <EntitySet Name="tcUsersRoles" EntityType="Self.tcUsersRole" />
+    <EntitySet Name="tcRentRestrictionPercents" EntityType="Self.tcRentRestrictionPercent" />
+    <AssociationSet Name="FK_AGMI_Building" Association="Self.FK_AGMI_Building">
+      <End Role="tcBuilding" EntitySet="tcBuildings" />
+      <End Role="tcAGMI" EntitySet="tcAGMIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assets_FamilyMember" Association="Self.FK_Assets_FamilyMember">
+      <End Role="tcFamilyMember" EntitySet="tcFamilyMembers" />
+      <End Role="tcAssets" EntitySet="tcAssets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Building_Property" Association="Self.FK_Building_Property">
+      <End Role="tcProperty" EntitySet="tcProperties" />
+      <End Role="tcBuilding" EntitySet="tcBuildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcBuilding_tcMinimumIncomeLimits" Association="Self.FK_tcBuilding_tcMinimumIncomeLimits">
+      <End Role="tcMinimumIncomeLimits" EntitySet="tcMinimumIncomeLimits" />
+      <End Role="tcBuilding" EntitySet="tcBuildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcBuilding_tcMinimumSetAsideType" Association="Self.FK_tcBuilding_tcMinimumSetAsideType">
+      <End Role="tcMinimumSetAsideType" EntitySet="tcMinimumSetAsideTypes" />
+      <End Role="tcBuilding" EntitySet="tcBuildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcBuilding_tcMinimumSetAsideType1" Association="Self.FK_tcBuilding_tcMinimumSetAsideType1">
+      <End Role="tcMinimumSetAsideType" EntitySet="tcMinimumSetAsideTypes" />
+      <End Role="tcBuilding" EntitySet="tcBuildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Unit_Building" Association="Self.FK_Unit_Building">
+      <End Role="tcBuilding" EntitySet="tcBuildings" />
+      <End Role="tcUnit" EntitySet="tcUnits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComplianceEntity_ComplianceEntityType" Association="Self.FK_ComplianceEntity_ComplianceEntityType">
+      <End Role="tcComplianceEntityType" EntitySet="tcComplianceEntityTypes" />
+      <End Role="tcComplianceEntity" EntitySet="tcComplianceEntities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcComplianceRentRestrictionIncomeLimit_tcComplianceEntity" Association="Self.FK_tcComplianceRentRestrictionIncomeLimit_tcComplianceEntity">
+      <End Role="tcComplianceEntity" EntitySet="tcComplianceEntities" />
+      <End Role="tcComplianceRentRestrictionIncomeLimit" EntitySet="tcComplianceRentRestrictionIncomeLimits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComplianceRule_ComplianceProgram" Association="Self.FK_ComplianceRule_ComplianceProgram">
+      <End Role="tcComplianceProgram" EntitySet="tcCompliancePrograms" />
+      <End Role="tcComplianceRule" EntitySet="tcComplianceRules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComplianceRuleTarget_ComplianceRule" Association="Self.FK_ComplianceRuleTarget_ComplianceRule">
+      <End Role="tcComplianceRule" EntitySet="tcComplianceRules" />
+      <End Role="tcComplianceRuleTarget" EntitySet="tcComplianceRuleTargets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTAssets_tcDTFamilyMember" Association="Self.FK_tcDTAssets_tcDTFamilyMember">
+      <End Role="tcDTFamilyMember" EntitySet="tcDTFamilyMembers" />
+      <End Role="tcDTAssets" EntitySet="tcDTAssets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTBuilding_tcDTMinimumIncomeLimits" Association="Self.FK_tcDTBuilding_tcDTMinimumIncomeLimits">
+      <End Role="tcDTMinimumIncomeLimits" EntitySet="tcDTMinimumIncomeLimits" />
+      <End Role="tcDTBuilding" EntitySet="tcDTBuildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTBuilding_tcDTMinimumSetAsideType" Association="Self.FK_tcDTBuilding_tcDTMinimumSetAsideType">
+      <End Role="tcDTMinimumSetAsideType" EntitySet="tcDTMinimumSetAsideTypes" />
+      <End Role="tcDTBuilding" EntitySet="tcDTBuildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTBuilding_tcDTMinimumSetAsideType1" Association="Self.FK_tcDTBuilding_tcDTMinimumSetAsideType1">
+      <End Role="tcDTMinimumSetAsideType" EntitySet="tcDTMinimumSetAsideTypes" />
+      <End Role="tcDTBuilding" EntitySet="tcDTBuildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTBuilding_tcDTProperty" Association="Self.FK_tcDTBuilding_tcDTProperty">
+      <End Role="tcDTProperty" EntitySet="tcDTProperties" />
+      <End Role="tcDTBuilding" EntitySet="tcDTBuildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTUnit_tcDTBuilding" Association="Self.FK_tcDTUnit_tcDTBuilding">
+      <End Role="tcDTBuilding" EntitySet="tcDTBuildings" />
+      <End Role="tcDTUnit" EntitySet="tcDTUnits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTRentRestrictionIncomeLimit_tcDTEligibility" Association="Self.FK_tcDTRentRestrictionIncomeLimit_tcDTEligibility">
+      <End Role="tcDTEligibility" EntitySet="tcDTEligibilities" />
+      <End Role="tcDTRentRestrictionIncomeLimit" EntitySet="tcDTRentRestrictionIncomeLimits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTFamilyMember_tcDTFamily" Association="Self.FK_tcDTFamilyMember_tcDTFamily">
+      <End Role="tcDTFamily" EntitySet="tcDTFamilies" />
+      <End Role="tcDTFamilyMember" EntitySet="tcDTFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTTIC_tcDTFamily" Association="Self.FK_tcDTTIC_tcDTFamily">
+      <End Role="tcDTFamily" EntitySet="tcDTFamilies" />
+      <End Role="tcDTTIC" EntitySet="tcDTTICs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTFamilyMember_tcDTFamilyMemberStatus" Association="Self.FK_tcDTFamilyMember_tcDTFamilyMemberStatus">
+      <End Role="tcDTFamilyMemberStatus" EntitySet="tcDTFamilyMemberStatus" />
+      <End Role="tcDTFamilyMember" EntitySet="tcDTFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTFamilyMember_tcDTSpecialStatus" Association="Self.FK_tcDTFamilyMember_tcDTSpecialStatus">
+      <End Role="tcDTSpecialStatus" EntitySet="tcDTSpecialStatus" />
+      <End Role="tcDTFamilyMember" EntitySet="tcDTFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTFamilyMember_tcDTStudentStatus" Association="Self.FK_tcDTFamilyMember_tcDTStudentStatus">
+      <End Role="tcDTStudentStatus" EntitySet="tcDTStudentStatus" />
+      <End Role="tcDTFamilyMember" EntitySet="tcDTFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTIncome_tcDTFamilyMember" Association="Self.FK_tcDTIncome_tcDTFamilyMember">
+      <End Role="tcDTFamilyMember" EntitySet="tcDTFamilyMembers" />
+      <End Role="tcDTIncome" EntitySet="tcDTIncomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTIncome_tcDTIncomeType" Association="Self.FK_tcDTIncome_tcDTIncomeType">
+      <End Role="tcDTIncomeType" EntitySet="tcDTIncomeTypes" />
+      <End Role="tcDTIncome" EntitySet="tcDTIncomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTMedianIncome_tcDTProperty" Association="Self.FK_tcDTMedianIncome_tcDTProperty">
+      <End Role="tcDTProperty" EntitySet="tcDTProperties" />
+      <End Role="tcDTMedianIncome" EntitySet="tcDTMedianIncomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTRentRestrictionIncomeLimit_tcTIC" Association="Self.FK_tcDTRentRestrictionIncomeLimit_tcTIC">
+      <End Role="tcTIC" EntitySet="tcTICs" />
+      <End Role="tcDTRentRestrictionIncomeLimit" EntitySet="tcDTRentRestrictionIncomeLimits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcDTTIC_tcDTTransactionType" Association="Self.FK_tcDTTIC_tcDTTransactionType">
+      <End Role="tcDTTransactionType" EntitySet="tcDTTransactionTypes" />
+      <End Role="tcDTTIC" EntitySet="tcDTTICs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcEliteKeyMap_tcUniqueKeyMap" Association="Self.FK_tcEliteKeyMap_tcUniqueKeyMap">
+      <End Role="tcUniqueKeyMap" EntitySet="tcUniqueKeyMaps" />
+      <End Role="tcEliteKeyMap" EntitySet="tcEliteKeyMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FamilyMember_Family" Association="Self.FK_FamilyMember_Family">
+      <End Role="tcFamily" EntitySet="tcFamilies" />
+      <End Role="tcFamilyMember" EntitySet="tcFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcHistoricalOccupancies_tcFamily" Association="Self.FK_tcHistoricalOccupancies_tcFamily">
+      <End Role="tcFamily" EntitySet="tcFamilies" />
+      <End Role="tcHistoricalOccupancies" EntitySet="tcHistoricalOccupancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcOccupancy_tcFamily" Association="Self.FK_tcOccupancy_tcFamily">
+      <End Role="tcFamily" EntitySet="tcFamilies" />
+      <End Role="tcOccupancy" EntitySet="tcOccupancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcTIC_tcFamily" Association="Self.FK_tcTIC_tcFamily">
+      <End Role="tcFamily" EntitySet="tcFamilies" />
+      <End Role="tcTIC" EntitySet="tcTICs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FamilyMember_FamilyMemberStatus" Association="Self.FK_FamilyMember_FamilyMemberStatus">
+      <End Role="tcFamilyMemberStatus" EntitySet="tcFamilyMemberStatus" />
+      <End Role="tcFamilyMember" EntitySet="tcFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FamilyMember_SpecialStatus" Association="Self.FK_FamilyMember_SpecialStatus">
+      <End Role="tcSpecialStatus" EntitySet="tcSpecialStatus" />
+      <End Role="tcFamilyMember" EntitySet="tcFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FamilyMember_StudentStatus" Association="Self.FK_FamilyMember_StudentStatus">
+      <End Role="tcStudentStatus" EntitySet="tcStudentStatus" />
+      <End Role="tcFamilyMember" EntitySet="tcFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Income_FamilyMember" Association="Self.FK_Income_FamilyMember">
+      <End Role="tcFamilyMember" EntitySet="tcFamilyMembers" />
+      <End Role="tcIncome" EntitySet="tcIncomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcFamilyMember_tcGender" Association="Self.FK_tcFamilyMember_tcGender">
+      <End Role="tcGender" EntitySet="tcGenders" />
+      <End Role="tcFamilyMember" EntitySet="tcFamilyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcHistoricalOccupancies_tcUnit" Association="Self.FK_tcHistoricalOccupancies_tcUnit">
+      <End Role="tcUnit" EntitySet="tcUnits" />
+      <End Role="tcHistoricalOccupancies" EntitySet="tcHistoricalOccupancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Income_IncomeType" Association="Self.FK_Income_IncomeType">
+      <End Role="tcIncomeType" EntitySet="tcIncomeTypes" />
+      <End Role="tcIncome" EntitySet="tcIncomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcMedianIncome_tcProperty" Association="Self.FK_tcMedianIncome_tcProperty">
+      <End Role="tcProperty" EntitySet="tcProperties" />
+      <End Role="tcMedianIncome" EntitySet="tcMedianIncomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Occupancy_Family" Association="Self.FK_Occupancy_Family">
+      <End Role="tcMinimumSetAsideType" EntitySet="tcMinimumSetAsideTypes" />
+      <End Role="tcOccupancy" EntitySet="tcOccupancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Occupancy_Unit" Association="Self.FK_Occupancy_Unit">
+      <End Role="tcUnit" EntitySet="tcUnits" />
+      <End Role="tcOccupancy" EntitySet="tcOccupancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rent_Property" Association="Self.FK_Rent_Property">
+      <End Role="tcProperty" EntitySet="tcProperties" />
+      <End Role="tcRent" EntitySet="tcRents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rent_UnitSize" Association="Self.FK_Rent_UnitSize">
+      <End Role="tcUnitSize" EntitySet="tcUnitSizes" />
+      <End Role="tcRent" EntitySet="tcRents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsersRoles_Roles" Association="Self.FK_UsersRoles_Roles">
+      <End Role="tcRoles" EntitySet="tcRoles" />
+      <End Role="tcUsersRoles" EntitySet="tcUsersRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcTIC_tcTransactionType" Association="Self.FK_tcTIC_tcTransactionType">
+      <End Role="tcTransactionType" EntitySet="tcTransactionTypes" />
+      <End Role="tcTIC" EntitySet="tcTICs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Unit_UnitSize" Association="Self.FK_Unit_UnitSize">
+      <End Role="tcUnitSize" EntitySet="tcUnitSizes" />
+      <End Role="tcUnit" EntitySet="tcUnits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsersRoles_Users" Association="Self.FK_UsersRoles_Users">
+      <End Role="tcUsers" EntitySet="tcUsers" />
+      <End Role="tcUsersRoles" EntitySet="tcUsersRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
