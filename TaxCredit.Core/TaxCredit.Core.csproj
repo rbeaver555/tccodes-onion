@@ -70,6 +70,7 @@
     <Compile Include="DomainServices\FamilySizeCalculationStandard.cs" />
     <Compile Include="DomainServices\GrossIncomeCalculationStandard.cs" />
     <Compile Include="DomainServices\IncomeFilters.cs" />
+    <Compile Include="DomainServices\Regex.cs" />
     <Compile Include="DomainServices\TotalAssetCalculationStandard.cs" />
     <Compile Include="Interfaces\DomainServices\IAssetFilters.cs" />
     <Compile Include="Interfaces\DomainServices\IGrossAssetIncomeAmountCalculation.cs" />
