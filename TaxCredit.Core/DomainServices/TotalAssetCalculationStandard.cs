@@ -46,6 +46,28 @@ namespace TaxCredit.Core.DomainServices
 
             return assets;
         }
-      
+
+        //create a function that takes a string and returns it in reverse
+        public string ReverseString(string input)
+        {
+            string output = string.Empty;
+            for (int i = input.Length - 1; i >= 0; i--)
+            {
+                output += input[i];
+            }
+            return output;
+        }
+
+        //create a function that utilizes a regex to validate email addresses
+        public bool ValidateEmail(string email)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+        }
+
+        //build a new function to calculate the total asset value for a family with a conditional statement that caps asset value to 10000
+
+
+        
+
     }
 }

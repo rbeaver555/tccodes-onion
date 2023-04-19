@@ -18,8 +18,9 @@ namespace TaxCredit.Infrastructure.Tests.Core.DomainServices
         {
             //Arrange                       
             ITotalAssetCalculation standardGrossAssetCalculation = new TotalAssetCalculationStandard();
-            var mockAssetRepository = new Mock<IAssetRepository>();            
+            var mockAssetRepository = new Mock<IAssetRepository>();
             Mock<tcFamily> stubFamily = new Mock<tcFamily>();
+
 
             mockAssetRepository
             .Setup(repo => repo.GetAssetsByFamily(It.IsAny<int>()))
@@ -48,14 +49,80 @@ namespace TaxCredit.Infrastructure.Tests.Core.DomainServices
             Assert.IsTrue(totalAssetAmount == 10000);
         }
 
-        public void MultipleAssets_NoIncome_NoWithdrawl_ShouldCalculateto10000()
+        [TestMethod]
+        public void MultipleAssets_WithIncome_NoWithdrawl_ShouldCalculateto10000()
+        {
+
+            //Arrange                       
+            ITotalAssetCalculation standardGrossAssetCalculation = new TotalAssetCalculationStandard();
+            var stubFamily = new Mock<tcFamily>();
+            var mockAssetRepository = new Mock<IAssetRepository>();
+
+
+            mockAssetRepository
+                .Setup(repo => repo.GetAssetsByFamily(It.IsAny<int>()))
+                .Returns(new List<tcAsset>()
+                {
+                                new tcAsset
+                                {
+                                    Value = 10000,
+                                    IsActive = true,
+                                    tcFamilyMember = new tcFamilyMember
+                                    {
+                                        tcFamilyMemberStatu = new tcFamilyMemberStatu{ FamilyMemberStatus = "Head"},
+                                        IsActive = true
+                                    },
+                                    AnnualIncome=50000,
+                                    WithdrawlPenalty=0
+                                }
+                });
+
+            //Act
+            var totalAssetAmount = standardGrossAssetCalculation.CalculateTotalAssetAmount(
+                               stubFamily.Object, mockAssetRepository.Object);
+
+
+            //Assert            
+            Assert.IsTrue(totalAssetAmount == 10000);
+
+        }
+
+        [TestMethod]
+        public void MultipleAssets_WithIncome_WithWithdrawl_ShouldCalculateto10000()
         {
             //Arrange                       
-           
-            //Act
-           
-            //Assert            
-                      
+            ITotalAssetCalculation standardGrossAssetCalculation = new TotalAssetCalculationStandard();
+            var stubFamily = new Mock<tcFamily>();
+            var mockAssetRepository = new Mock<IAssetRepository>();
+
+            mockAssetRepository
+                .Setup(repo => repo.GetAssetsByFamily(It.IsAny<int>()))
+                .Returns(new List<tcAsset>()
+                {
+                                new tcAsset
+                                {
+                                    Value = 10000,
+                                    IsActive = true,
+                                    tcFamilyMember = new tcFamilyMember
+                                    {
+                                        tcFamilyMemberStatu = new tcFamilyMemberStatu{ FamilyMemberStatus = "Head"},
+                                        IsActive = true
+                                    },
+                                    AnnualIncome=50000,
+                                    WithdrawlPenalty=1000
+                                }
+                });
+
+                //Act
+                var totalAssetAmount = standardGrossAssetCalculation.CalculateTotalAssetAmount(
+                                                   stubFamily.Object, mockAssetRepository.Object);
+
+            //Assert
+                //Assert
+                Assert.IsTrue(totalAssetAmount == 10000);
         }
+
+        
+
     }
 }
